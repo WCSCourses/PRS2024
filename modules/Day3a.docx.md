@@ -210,7 +210,7 @@ For illustrative purposes, this table uses the first scenario, EUR base and EUR 
 
 #### Scenario 1: Predicting from EUR training to EUR target data
 ```sh
-Rscript /Volumes/Chris-1/PRS24/Data_Day4/software/PRSice.R \
+Rscript ./Volumes/Chris-1/PRS24/Data_Day4/software/PRSice.R \
 --prsice /Volumes/Chris-1/PRS24/Data_Day4/software/PRSice_mac \
 --base /Volumes/Chris-1/PRS24/Data_Day4/data/EUR-SBP-simulated.sumstats.prscsx \
 --A1 A1 \
