@@ -209,22 +209,29 @@ For illustrative purposes, this table uses the first scenario, EUR base and EUR 
 ### Code
 
 #### Scenario 1: Predicting from EUR training to EUR target data
+First create the output directory
+```
+mkdir /home/manager/data/Data_Day4/data/out
+```
+
+
+
 ```sh
-Rscript ./Volumes/Chris-1/PRS24/Data_Day4/software/PRSice.R \
---prsice /Volumes/Chris-1/PRS24/Data_Day4/software/PRSice_mac \
---base /Volumes/Chris-1/PRS24/Data_Day4/data/EUR-SBP-simulated.sumstats.prscsx \
+Rscript /home/manager/PRSice_linux/PRSice.R \
+--prsice /home/manager/PRSice_linux/PRSice \
+--base /home/manager/data/Data_Day4/data/EUR-SBP-simulated.sumstats.prscsx \
 --A1 A1 \
 --pvalue P \
 --no-clump \
 --beta \
 --snp SNP \
 --score sum \
---target /Volumes/Chris-1/PRS24/Data_Day4/data/EUR_1kg.hm3.only.csx \
+--target /home/manager/data/Data_Day4/data/EUR_1kg.hm3.only.csx \
 --binary-target F \
---pheno /Volumes/Chris-1/PRS24/Data_Day4/data/sbp_eur_1kg.sim_pheno \
+--pheno /home/manager/data/Data_Day4/data/sbp_eur_1kg.sim_pheno \
 --pheno-col pheno100 \
 --thread 8 \
---out /Volumes/Chris-1/PRS24/Data_Day4/out/SBP_trial.eur.eur  
+--out /home/manager/data/Data_Day4/data/out/SBP_trial.eur.eur  
 ```
 
 <details>
