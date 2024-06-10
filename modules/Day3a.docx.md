@@ -268,12 +268,14 @@ xdg-open SBP.eur.eur_BARPLOT_2024-06-12.png
 
 <details>
   <summary>Which p-value threshold generates the "best-fit" PRS?</summary>
+  
   P-value threshold of 0.00205005.
 </details>
 
 <details> 
   <summary>What does "best-fit" mean?</summary>
-"Best-fit" refers to the p-value threshold at which the PRS accounts for the highest proportion of variance in the phenotype (R<sup>2</sup>) compared to other thresholds tested.
+
+  "Best-fit" refers to the p-value threshold at which the PRS accounts for the highest proportion of variance in the phenotype (R<sup>2</sup>) compared to other thresholds tested.
 </details>
 
 <details> 
@@ -286,7 +288,8 @@ xdg-open SBP.eur.eur_BARPLOT_2024-06-12.png
 
 <details>
 <summary>Which file provides a summary of the "best-fit" PRS?</summary>
-SBP.eur.eur.summary
+
+  SBP.eur.eur.summary
 </details>
 
 View this summary output file: 
@@ -296,8 +299,10 @@ cat /home/manager/data/Data_Day4/data/out/SBP.eur.eur.summary
 
 <details>
 <summary>How much phenotypic variation does the "best-fit" PRS explain? What does this mean in very simple terms?</summary>
-R<sup>2</sup> = 0.0829 (8.2%).
-This R<sup>2</sup> value means that out of the total variability observed in the trait across the population (under study), 8.2% of the variation can be attributed to the genetic variants included in this PRS.
+
+  R<sup>2</sup> = 0.0829 (8.2%).
+  
+  This R<sup>2</sup> value means that out of the total variability observed in the trait across the population (under study), 8.2% of the variation can be attributed to the genetic variants included in this PRS.
 </details>
 
 <details>
