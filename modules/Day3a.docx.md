@@ -239,15 +239,18 @@ Rscript /home/manager/PRSice_linux/PRSice.R \
 
 <details>
   <summary>How many files have been generated from this code and what does each file show you?</summary>
-  This code generates xxx?? files. 
+  This code generates six files. 
   Each files serves a different purpose in the analysis and interpretation of derived PRS.
   These are outlined below: 
   
-  1. Summary Statistics File: Provides a high-level overview of the PRS analysis results, allowing for a quick assessment of the PRS model's performance.
-  2. Log File: Useful for debugging and detailed tracking of the computational steps undertaken during the PRS calculation.
-  3. High-resolution Plots: Assist in visually assessing the sensitivity of PRS performance to the choice of P-value cutoffs and in selecting the optimal model.
-  4. Best-fit PRS File: Essential for understanding which genetic variants contribute most significantly to the trait under study in the specific dataset used.
-  5. Score Files: Allow for the practical application of the PRS in predicting or studying the trait within the study population; these scores are what you would correlate with actual phenotypic outcomes to validate or   use the PRS.
+  1. .summary: Provides a high-level summary of the best-performing PRS analysis result, allowing for a quick assessment of the PRS model's performance.
+  2. .prsice: Provides the PRS analysis results across all p-value thresholds. This file will be the input for the bar plot that assesses the R2 at each p-value threshold.
+  3. .log: Useful for debugging and detailed tracking of the computational steps undertaken during the PRS calculation.
+  4. .best: Provides details of which individuals (IID) are included in the PRS regression analysis that assesses the association between the genotype and phenotype, and provides their individual PRS score
+  5. .png (Bar plot): Assist in visually assessing the performance of PRS calculated at each p-value threshold, with the most predictive bar being the highest R<sup>2</sup> and thus the tallest bar).
+      The y axis shows the phenotypic variance explained (R<sup>2</sup>), the x-axis the various p-value thresholds, and the text above each bar is the p-value showing the significance of the association between the PRS and phenotype.
+      The colours of the bars (from red to blue) indicate the strength of the association with red indicating lower p-values (greater significance). 
+  6. .png (High resolution plot): Assist in visually assessing the performance of PRS calculated at each p-value threshold. However, this high-resolution plot uses a negative logarithmic scale on the Y-axis to show the performance of different combinations of SNPS in predicting the trait as measured by their p-values. Lower p-values indicate better performance and appear higher on the Y-axis.
 </details>
 
 
