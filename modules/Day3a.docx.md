@@ -35,14 +35,14 @@ In this practical, we will compute a PRS for systolic blood pressure (SBP) and a
 3. EUR base - AFR target: Utilise European summary statistics as the training data and individual-level genotyped data from Africans as the target dataset. 
 
 Please note that the sample sizes of the individual-level target data are as follows: 
-Europeans (n = 500) and Africans (n = 650). 
+Europeans (n = ~500) and Africans (n = ~650). 
 
 * Note: This is simulated data with no real-life biological meaning or implication. 
 
 |**Dataset**|**Source**|**Description**|
 |:---:|:---:|:---:|
 |Base dataset (EUR, AFR)|simulated |GWAS summary stats of SBP|
-|Target dataset (EUR, AFR)|simulated |EUR (n = 500), AFR (n = 650)| 
+|Target dataset (EUR, AFR)|simulated |EUR (n = ~500), AFR (n = ~650)| 
 
 
 ## Downloading Datasets
