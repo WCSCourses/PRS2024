@@ -45,9 +45,14 @@ Europeans (n = 500) and Africans (n = 650).
 
 ## Downloading Datasets
  
-All required material for this practical is found in the **/home/manager/data/Data_Day4/data** directory. 
+All required software for this practical is found in the **/home/manager/data/Data_Day4/software** directory.
+🛠️: Software
+  - PRSice.R 
+  - PRSice_linux
 
-The relevant materials that you should see there at the start of the practical are as follows:
+All required data for this practical is found in the **/home/manager/data/Data_Day4/data** directory. 
+
+The relevant data that you should see there at the start of the practical are as follows:
 
  📂: Base_Data (summary statistics)
   - AFR-SBP-simulated.sumstats.prscsx
@@ -60,19 +65,14 @@ The relevant materials that you should see there at the start of the practical a
   - sbp.eur.1kg.sim_pheno
        
   📁: Reference files
-    - 1kg.afr.dbSNP153.hg38.bed
+  - 1kg.afr.dbSNP153.hg38.bed
   - 1kg.afr.dbSNP153.hg38.bim
   - 1kg.afr.dbSNP153.hg38.fam
   - 1kg.eur.dbSNP153.hg38.bed
   - 1kg.eur.dbSNP153.hg38.bim
   - 1kg.eur.dbSNP153.hg38.fam
      
- 🛠️: Software
-  - PRSice.R 
-  - PRSice_linux
-  - nagelkerke.R
-  - Quantile.R
-
+ 
 ## Method for calculating PRS
 For this practical we will use PRSice-2. PRSice-2 is one of the dedicated PRS calculation and analysis programs that makes use of a sequence of PLINK functions. The tools utilises the standard clumping and thresholding (C+T) approach.
 
