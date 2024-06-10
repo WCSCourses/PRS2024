@@ -1,5 +1,3 @@
-# This repo is under development 
-
 # Polygenic Risk Scores Uganda 2024 
 Base for the Polygenic Risk Scores course Repository
 
@@ -14,7 +12,6 @@ The course will begin with an overview of genome-wide association studies, an in
 [PRS Course website](https://coursesandconferences.wellcomeconnectingscience.org/event/polygenic-risk-score-analysis-africa-20240609/)
 
 ## Instructors
-- [Marion Amujal](https://h3africa.org/index.php/19th-meeting-attendees/marion-amujal-picture/), Makerere University, Uganda
 - [Palwende Boua](https://crun.bf/researchers/palwende-romuald-boua/), Institut de Recherche en Sciences de la Santé, Burkina Faso
 - [Tinashe Chikowore](https://connects.catalyst.harvard.edu/Profiles/display/Person/213790), Harvard University, USA
 - [Itunuoluwa Isewon](https://scholar.google.com/citations?user=haW6Ux8AAAAJ&hl=en), Covenant University, Nigeria
@@ -23,7 +20,8 @@ The course will begin with an overview of genome-wide association studies, an in
 - [Carene Ndong Sima](https://www.linkedin.com/in/carene-anne-alene-ndong-sima),Stellenbosch University, South Africa 
 - [Jones Gyamfi](https://research.tees.ac.uk/en/persons/jones-gyamfi), Teesside University, Middlesbrough, UK
 - [Susan Kanjira](404), University of Edinburgh, UK
-- [Michelle Kamp](404),King's College London, UK 
+- [Michelle Kamp](404),King's College London, UK
+- [Gloria Kirabo](404), Makerere University, Uganda
 
 
 
@@ -56,7 +54,10 @@ The course will begin with an overview of genome-wide association studies, an in
 
 
 **Day 3 - Advanced PRS Analyses**  
-[Day 3 Online Manual - Introduction to PRS](modules/Day3.docx.md)
+Module 3 - A TBC
+
+Module 3 - B TBC
+<!--- [Day 3 Online Manual - Introduction to PRS](modules/Day3.docx.md) --->
 
 
 **Day 4 - Genetic Variation and Population Genetics**  
