@@ -31,6 +31,7 @@ In this practical, we will compute a PRS for systolic blood pressure (SBP) and a
 2. AFR base - AFR target: Utilise African summary statistics as the training data and individual-level genotyped data from Africans as the target dataset.
 
 **ANCESTRY-UNMATCHED**
+
 3. EUR base - AFR target: Utilise European summary statistics as the training data and individual-level genotyped data from Africans as the target dataset. 
 
 Please note that the sample sizes of the individual-level target data are as follows: 
