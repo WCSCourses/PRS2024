@@ -23,7 +23,7 @@ After completing this practical, you should be able to:
 
 ## Base and Target datasets 
 In this practical, we will compute a PRS for systolic blood pressure (SBP) and assess it performance across European and African ancestry datasets to clearly illustrate the portability problem. 
-We will assess the predictive utility of 3 scores:
+We will assess the predictive utility of **3** scores:
 
 **ANCESTRY-MATCHED**
 1. EUR base - EUR target: Utilise European summary statistics as the training data and individual-level genotyped data from Europeans as the target dataset. 
@@ -46,9 +46,11 @@ Europeans (n = 500) and Africans (n = 650).
 ## Downloading Datasets
  
 All required software for this practical is found in the **/home/manager/data/Data_Day4/software** directory.
+
 🛠️: Software
   - PRSice.R 
   - PRSice_linux
+  - plink_linux
 
 All required data for this practical is found in the **/home/manager/data/Data_Day4/data** directory. 
 
