@@ -422,9 +422,9 @@ read_and_label <- function(file, ancestry) {
 }
 
 # Read each file with the corresponding ancestry information
-EUR_EUR <- read_and_label("SBP_vmtrial.eur.eur.summary", "EUR_EUR")
-AFR_AFR <- read_and_label("SBP_vmtrial_50.afr.afr.summary", "AFR_AFR")
-EUR_AFR <- read_and_label("SBP_vmtrial_50.eur.afr.summary", "EUR_AFR")
+EUR_EUR <- read_and_label("SBP.eur.eur.summary", "EUR_EUR")
+AFR_AFR <- read_and_label("SBP.afr.afr.summary", "AFR_AFR")
+EUR_AFR <- read_and_label("SBP.eur.afr.summary", "EUR_AFR")
 
 # Combine all data into one dataframe
 all_data <- rbind(EUR_EUR, AFR_AFR, EUR_AFR)
@@ -450,7 +450,7 @@ print(ancestry)
 dev.off()
 ```
 
-Examine the bar plot indicating the R<sup>2</sup> for each base:target ancestry pair.
+Examine the bar plot indicating the R<sup>2</sup> for each base:target ancestry pair:
 ```sh
 xdg-open PRS_ancestry_analysis.png
 ```
