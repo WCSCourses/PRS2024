@@ -43,7 +43,14 @@ To perform PRS analyses, summary statistics from Genome-Wide Association Studies
 ## Data Structure
 You will find all practical materials in the **/home/manager/data/Day2_Target_Data/Day2_Target_Data** directory. Relevant materials that you should see there at the start of the practical are as follows:
 
-> First, download the Base datasets using this [link](https://www.dropbox.com/s/w7g75bo069tupuq/Day2_Base_Data.zip?dl=0).
+> First, download the Base datasets using this command - 
+> ```
+> cd ~/Downloads
+> wget https://wcs_data_transfer.cog.sanger.ac.uk/Day2_Base_Data.zip
+> ```
+> You may also download it via dropbox if the above fails with this
+> [link](https://www.dropbox.com/s/w7g75bo069tupuq/Day2_Base_Data.zip?dl=0).
+> 
 > The data will be downloaded into your "Downloads" folder. You will need to move it to right directory, using the following command.
 > ```
 > cd ~/data/Day2_Target_Data/Day2_Target_Data
