@@ -448,14 +448,14 @@ ancestry <- ggplot(all_data, aes(x = Ancestry, y = PRS.R2, fill = Ancestry)) +
 print(ancestry)
 
 dev.off()
-
- ```
+```
 
 Examine the bar plot indicating the R<sup>2</sup> for each base:target ancestry pair.
 ```sh
 xdg-open 
 
 **Figure 2.1: R2 Values by Ancestry **  
+```
 
 **QUESTIONS** 
 
