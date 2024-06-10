@@ -44,39 +44,28 @@ Europeans (n = 500) and Africans (n = 650).
 
 
 ## Downloading Datasets
+ 
+All required material for this practical is found in the **/home/manager/data/Data_Day4/data** directory. 
 
-The required datasets for this part of the practical can be downloaded at:       
+The relevant materials that you should see there at the start of the practical are as follows:
 
-[Download Backup WeTransfer](https://we.tl/t-YO8YbDjDK7)        
-
-The data will be downloaded into your "Downloads" folder. You will need to move it to right directory, using the following commands.
-
-
-```
-cd data
-mv ~/Downloads/Day_3.zip .
-unzip Day_3.zip
-cd Day_3
-```
-
-All required material for this practical is found in the **data/Day_3a** directory. Relevant materials that you should see there at the start of the practical are as follows:
-
- 📂: Base_Data
-  - GIANT_Height.txt,
-  - cad.add.txt,
-  - cad.add.readme.
-
+ 📂: Base_Data (summary statistics)
+  - AFR-SBP-simulated.sumstats.prscsx
+  - EUR-SBP-simulated.sumstats.prscsx
+ 
  📂: Target_Data
-  - TAR.fam
-  - TAR.bim
-  - TAR.bed
-  - TAR.height
-  - TAR.cad 
-  - TAR.covariate
-    
+  - AFR_1kg.hm3.only.csx (.bed, .bim, .fam)
+  - EUR_1kg.hm3.only.csx (.bed, .bim, .fam)
+  - sbp.afr.1kg.sim_pheno
+  - sbp.eur.1kg.sim_pheno
+       
   📁: Reference files
-   - Homo_sapiens.GRCh38.86.gt
-   - Sets.gmt
+    - 1kg.afr.dbSNP153.hg38.bed
+  - 1kg.afr.dbSNP153.hg38.bim
+  - 1kg.afr.dbSNP153.hg38.fam
+  - 1kg.eur.dbSNP153.hg38.bed
+  - 1kg.eur.dbSNP153.hg38.bim
+  - 1kg.eur.dbSNP153.hg38.fam
      
  🛠️: Software
   - PRSice.R 
@@ -207,12 +196,26 @@ For illustrative purposes, this table uses the first scenario, EUR base and EUR 
 
 ### Code
 
-#### Scenario 1: Predicting from EUR training to EUR target data
-First create the output directory
-```
-mkdir /home/manager/data/Data_Day4/data/out
+Open the terminal and move to the data directory for this practical:
+
+```sh
+cd /home/manager/data/Data_Day4/data
 ```
 
+Create the output directory - "out"
+```sh
+mkdir out
+```
+
+Look at the data files within the directory 
+
+```sh
+ls -l
+```
+
+Now, calculate PRS using **PRSice 2**
+
+#### Scenario 1: Predicting from EUR training to EUR target data
 
 ```sh
 Rscript /home/manager/PRSice_linux/PRSice.R \
