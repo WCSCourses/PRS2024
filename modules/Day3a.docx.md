@@ -452,39 +452,28 @@ dev.off()
 
 Examine the bar plot indicating the R<sup>2</sup> for each base:target ancestry pair.
 ```sh
-xdg-open 
-
-**Figure 2.1: R2 Values by Ancestry **  
+xdg-open PRS_ancestry_analysis.png
 ```
 
 **QUESTIONS** 
 
 <details>
   <summary>Which base:target pair has the highest phenotypic variance explained?</summary>
-  ANSWER.
+  EUR:EUR.
 </details>
 
 <details>
   <summary>Which base:target pair has the lowest phenotypic variance explained?</summary>
-  ANSWER.
+  AFR:AFR.
 </details>
 
 <details>
-  <summary>Explain the results?</summary>
+  <summary>Explain the results? Are they as expected?</summary>
    xxx.
 </details>
 
-<details>
-  <summary>Are all results as expected? Explain why this may be the case.</summary>
-  R<sup>2</sup> = 0.025 (2.5%).
-</details>
-
-
-
-
-
-> 
-> ‼️ Note that all target phenotype data in this worshop are **simulated**. They have no specific biological meaning and are for demonstration purposes only. 
+>
+> ‼️ Note that all target phenotype data in this workshop are **simulated**. They have no specific biological meaning and are for demonstration purposes only. 
 > 
 ---
 <a href="#top">[Back to Top](#table-of-contents)</a>
