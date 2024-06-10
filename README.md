@@ -1,5 +1,4 @@
 # Polygenic Risk Scores Uganda 2024 
-Base for the Polygenic Risk Scores course Repository
 
 ## Course overview
 The boost in collections of African genomic datasets is providing opportunities for further in-depth understanding of the causes of human diseases. As African genomic data from genome-wide analytical studies continues to grow, it is imperative that African scientists are empowered with skills to analyse these data using the latest tools and approaches for advancing research and genomics applications in Africa and globally. 
