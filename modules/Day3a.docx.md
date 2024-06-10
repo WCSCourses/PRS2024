@@ -215,7 +215,6 @@ mkdir /home/manager/data/Data_Day4/data/out
 ```
 
 
-
 ```sh
 Rscript /home/manager/PRSice_linux/PRSice.R \
 --prsice /home/manager/PRSice_linux/PRSice \
@@ -304,25 +303,25 @@ Including a larger number of informative SNPs generally increases the likelihood
 
 #### Scenario 2: Predicting from AFR training to AFR target data
 ```sh
-Rscript /Volumes/Chris-1/PRS24/Data_Day4/software/PRSice.R \
---prsice /Volumes/Chris-1/PRS24/Data_Day4/software/PRSice_mac \
---base /Volumes/Chris-1/PRS24/Data_Day4/data/AFR-SBP-simulated.sumstats.prscsx \
+Rscript /home/manager/PRSice_linux/PRSice.R \
+--prsice /home/manager/PRSice_linux/PRSice \
+--base /home/manager/data/Data_Day4/data/AFR-SBP-simulated.sumstats.prscsx \
 --A1 A1 \
 --pvalue P \
 --no-clump \
 --beta \
 --snp SNP \
 --score sum \
---target /Volumes/Chris-1/PRS24/Data_Day4/data/AFR_1kg.hm3.only.csx \
+--target /home/manager/data/Data_Day4/data/AFR_1kg.hm3.only.csx \
 --binary-target F \
---pheno /Volumes/Chris-1/PRS24/Data_Day4/data/sbp_afr_1kg.sim_pheno \
---pheno-col pheno100 \
+--pheno /home/manager/data/Data_Day4/data/sbp_afr_1kg.sim_pheno \
+--pheno-col pheno33 \
 --thread 8 \
---out /Volumes/Chris-1/PRS24/Data_Day4/out/SBP_trial.afr.afr
+--out /home/manager/data/Data_Day4/out/SBP_trial.afr.afr
 ```
 View the output file:
 ```sh
-cat /Volumes/Chris-1/PRS24/Data_Day4/out/SBP_trial.afr.afr.summary
+cat /home/manager/data/Data_Day4/out/SBP_trial.afr.afr.summary
 ```
 
 <details>
@@ -342,26 +341,26 @@ cat /Volumes/Chris-1/PRS24/Data_Day4/out/SBP_trial.afr.afr.summary
 
 #### Scenario 3: Predicting from EUR training to AFR target data
 ```sh
-Rscript /Volumes/Chris-1/PRS24/Data_Day4/software/PRSice.R \
---prsice /Volumes/Chris-1/PRS24/Data_Day4/software/PRSice_mac \
---base /Volumes/Chris-1/PRS24/Data_Day4/data/EUR-SBP-simulated.sumstats.prscsx \
+Rscript /home/manager/PRSice_linux/PRSice.R \
+--prsice /home/manager/PRSice_linux/PRSice \
+--base /home/manager/data/Data_Day4/data/EUR-SBP-simulated.sumstats.prscsx \
 --A1 A1 \
 --pvalue P \
 --no-clump \
 --beta \
 --snp SNP \
 --score sum \
---target /Volumes/Chris-1/PRS24/Data_Day4/data/AFR_1kg.hm3.only.csx \
+--target /home/manager/data/Data_Day4/data/AFR_1kg.hm3.only.csx \
 --binary-target F \
---pheno /Volumes/Chris-1/PRS24/Data_Day4/data/sbp_afr_1kg.sim_pheno \
---pheno-col pheno100 \
+--pheno /home/manager/data/Data_Day4/data/sbp_afr_1kg.sim_pheno \
+--pheno-col pheno33 \
 --thread 8 \
---out /Volumes/Chris-1/PRS24/Data_Day4/out/SBP_trial.afr.by.eur
+--out /home/manager/data/Data_Day4/out/SBP_trial.afr.by.eur
 ```
 
 View the output file: 
 ```sh
-cat /Volumes/Chris-1/PRS24/Data_Day4/out/SBP_trial.afr.eur.summary 
+cat /home/manager/data/Data_Day4/out/SBP_trial.afr.eur.summary 
 ```
 
 <details>
@@ -382,25 +381,25 @@ cat /Volumes/Chris-1/PRS24/Data_Day4/out/SBP_trial.afr.eur.summary
 
 #### Scenario 4: Predicting from AFR training to EUR target data
 ```sh
-Rscript /Volumes/Chris-1/PRS24/Data_Day4/software/PRSice.R \
---prsice /Volumes/Chris-1/PRS24/Data_Day4/software/PRSice_mac \
---base /Volumes/Chris-1/PRS24/Data_Day4/data/AFR-SBP-simulated.sumstats.prscsx \ 
+Rscript /home/manager/PRSice_linux/PRSice.R \
+--prsice /home/manager/PRSice_linux/PRSice \
+--base /home/manager/data/Data_Day4/data/AFR-SBP-simulated.sumstats.prscsx \ 
 --A1 A1 \
 --pvalue P \
 --no-clump \
 --beta \
 --snp SNP \
 --score sum \
---target /Volumes/Chris-1/PRS24/Data_Day4/data/EUR_1kg.hm3.only.csx \
+--target /home/manager/data/Data_Day4/data/EUR_1kg.hm3.only.csx \
 --binary-target F \
---pheno /Volumes/Chris-1/PRS24/Data_Day4/data/sbp_eur_1kg.sim_pheno \
+--pheno /home/manager/data/Data_Day4/data/sbp_eur_1kg.sim_pheno \
 --pheno-col pheno100 \
 --thread 8 \
---out /Volumes/Chris-1/PRS24/Data_Day4/out/SBP_trial.eur.by.afr
+--out /home/manager/data/Data_Day4/out/SBP_trial.eur.by.afr
  ```
 View the output file: 
 ```sh
-cat /Volumes/Chris-1/PRS24/Data_Day4/out/SBP_trial.eur.eur.summary 
+cat /home/manager/data/Data_Day4/out/SBP_trial.eur.eur.summary 
  ```
 <details>
   <summary>Which P-value threshold generates the "best-fit" PRS?</summary>
@@ -423,7 +422,7 @@ In this exercise, we will analyse and compare the phenotypic variance explained 
 
 Combine the summary files and visualise the performance of each PRS 
 ```sh
-Rscript /Volumes/Chris-1/PRS24/Data_Day4/software/R --- to check \
+Rscript /home/manager/data/Data_Day4/software/R --- to check \
 
 # Load necessary libraries
 library(ggplot2)
