@@ -23,7 +23,7 @@ After completing this practical, you should be able to:
 
 ## Base and Target datasets 
 In this practical, we will compute a PRS for systolic blood pressure (SBP) and assess it performance across European and African ancestry datasets to clearly illustrate the portability problem. 
-We will assess the predictive utility of 4 scores:
+We will assess the predictive utility of 3 scores:
 
 **ANCESTRY-MATCHED**
 1. EUR base - EUR target: Utilise European summary statistics as the training data and individual-level genotyped data from Europeans as the target dataset. 
@@ -31,7 +31,6 @@ We will assess the predictive utility of 4 scores:
 
 **ANCESTRY-UNMATCHED**
 1. EUR base - AFR target: Utilise European summary statistics as the training data and individual-level genotyped data from Africans as the target dataset. 
-2. AFR base - EUR target: Utilise African summary statistics as the training data and individual-level data from genotyped European as the target dataset.
 
 Please note that the sample sizes of the individual-level target data are as follows: 
 Europeans (n = 500) and Africans (n = 650). 
@@ -315,7 +314,7 @@ Rscript /home/manager/PRSice_linux/PRSice.R \
 --target /home/manager/data/Data_Day4/data/AFR_1kg.hm3.only.csx \
 --binary-target F \
 --pheno /home/manager/data/Data_Day4/data/sbp_afr_1kg.sim_pheno \
---pheno-col pheno33 \
+--pheno-col pheno50 \
 --thread 8 \
 --out /home/manager/data/Data_Day4/out/SBP_trial.afr.afr
 ```
@@ -353,7 +352,7 @@ Rscript /home/manager/PRSice_linux/PRSice.R \
 --target /home/manager/data/Data_Day4/data/AFR_1kg.hm3.only.csx \
 --binary-target F \
 --pheno /home/manager/data/Data_Day4/data/sbp_afr_1kg.sim_pheno \
---pheno-col pheno33 \
+--pheno-col pheno50 \
 --thread 8 \
 --out /home/manager/data/Data_Day4/out/SBP_trial.afr.by.eur
 ```
@@ -379,43 +378,6 @@ cat /home/manager/data/Data_Day4/out/SBP_trial.afr.eur.summary
 </details>
 
 
-#### Scenario 4: Predicting from AFR training to EUR target data
-```sh
-Rscript /home/manager/PRSice_linux/PRSice.R \
---prsice /home/manager/PRSice_linux/PRSice \
---base /home/manager/data/Data_Day4/data/AFR-SBP-simulated.sumstats.prscsx \ 
---A1 A1 \
---pvalue P \
---no-clump \
---beta \
---snp SNP \
---score sum \
---target /home/manager/data/Data_Day4/data/EUR_1kg.hm3.only.csx \
---binary-target F \
---pheno /home/manager/data/Data_Day4/data/sbp_eur_1kg.sim_pheno \
---pheno-col pheno100 \
---thread 8 \
---out /home/manager/data/Data_Day4/out/SBP_trial.eur.by.afr
- ```
-View the output file: 
-```sh
-cat /home/manager/data/Data_Day4/out/SBP_trial.eur.eur.summary 
- ```
-<details>
-  <summary>Which P-value threshold generates the "best-fit" PRS?</summary>
-  ANSWER.
-</details>
-
-<details>
-  <summary>How many SNPs are included in the "best-fit" PRS explain?</summary>
-  Number of SNPs = xxx.
-</details>
-
-<details>
-  <summary>How much phenotypic variation does the "best-fit" PRS explain?</summary>
-  R<sup>2</sup> = 0.025 (2.5%).
-</details>
-
 ## Exercise 2 Visualising and comparing R<sup>2</sup>
 
 In this exercise, we will analyse and compare the phenotypic variance explained (R<sup>2</sup>) by PRS across different combinations of base and target ancestries. 
@@ -439,10 +401,10 @@ read_and_label <- function(file, ancestry) {
 EUR_EUR <- read_and_label("SBP_trial.eur.eur.summary", "EUR_EUR")
 AFR_AFR <- read_and_label("SBP_trial.afr.afr.summary", "AFR_AFR")
 EUR_AFR <- read_and_label("SBP_trial.eur.by.afr.summary", "EUR_AFR")
-AFR_EUR <- read_and_label("SBP_trial.afr.by.eur.summary", "AFR_EUR")
+
 
 # Combine all data into one dataframe
-all_data <- rbind(EUR_EUR, AFR_AFR, EUR_AFR, AFR_EUR)
+all_data <- rbind(EUR_EUR, AFR_AFR, EUR_AFR)
 
 # Create a bar graph with different colors for each ancestry
 ggplot(all_data, aes(x = Ancestry, y = PRS.R2, fill = Ancestry)) +
