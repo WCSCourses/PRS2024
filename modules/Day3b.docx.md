@@ -30,14 +30,40 @@ Genetic variation is conveyed using allelic frequencies. Allele frequency is sha
 ```
 Population-stratified allele frequencies are reported in the output file plink.frq.strat.
 For each population, print the numbers of total SNPs to screen, as follows:
+**AFR**
 ```sh
 grep -F 'AFR' plink.frq.strat | wc -l
 ```
 From there we can print the number of SNPs with minor allele frequencies greater than 0 (and are hence potentially available for genomic analyes).
 ```sh
+grep -F 'AFR' plink.frq.strat | awk '$6 >0' | wc -l
+```
+
+**EUR**
+```sh
+grep -F 'EUR' plink.frq.strat | wc -l
+```
+Number of SNPs with MAF > 0 in EUR.
+```sh
+grep -F 'EUR' plink.frq.strat | awk '$6 >0' | wc -l
+```
+
+**EAS**
+```sh
+grep -F 'EAS' plink.frq.strat | wc -l
+```
+Number of SNPs with MAF > 0 in EAS.
+```sh
 grep -F 'EAS' plink.frq.strat | awk '$6 >0' | wc -l
 ```
-Recycle the code above to find the number of available SNPs in each of the 4 other global populations (EUR, AFR, SAS, AMR).
+**SAS**
+```sh
+grep -F 'SAS' plink.frq.strat | wc -l
+```
+Number of SNPs with MAF > 0 in SAS.
+```sh
+grep -F 'SAS' plink.frq.strat | awk '$6 >0' | wc -l
+```
 
 #### **Questions**
 ##### (i) Which population contains the most SNPs?
