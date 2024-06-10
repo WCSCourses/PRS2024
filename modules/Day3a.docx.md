@@ -23,6 +23,7 @@ After completing this practical, you should be able to:
 
 ## Base and Target datasets 
 In this practical, we will compute a PRS for systolic blood pressure (SBP) and assess it performance across European and African ancestry datasets to clearly illustrate the portability problem. 
+
 **We will assess the predictive utility of 3 scores**:
 
 **ANCESTRY-MATCHED**
