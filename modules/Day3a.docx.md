@@ -431,7 +431,7 @@ all_data <- rbind(EUR_EUR, AFR_AFR, EUR_AFR)
 
 # Create a bar graph with different colors for each ancestry
 
-png('/home/manager/data/Data_Day4/out/PRS_ancestry_analysis.png', unit='px', res=300, width=3500, height=4500)
+png('/home/manager/data/Data_Day4/data/out/PRS_ancestry_analysis.png', unit='px', res=300, width=3500, height=4500)
 
 ancestry <- ggplot(all_data, aes(x = Ancestry, y = PRS.R2, fill = Ancestry)) +
   geom_bar(stat = "identity", position = "dodge") +
