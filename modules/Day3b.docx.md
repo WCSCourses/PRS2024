@@ -93,22 +93,58 @@ grep -F 'AFR' plink.frq.strat | awk '$6 >0' | wc -l
 &nbsp;
 
 #### 3. Distribution of allele frequencies
+
+In this exercise, we will analyse and compare the distribution of allele frequencies across different ancestries. 
+We will use R for visualisation.
+
+**Open a new terminal and open R**
+
+Open a new tab in the terminal (**plus icon in the top left corner**)
+
+In this new terminal window, make sure you are in the correct directory:
+
+```sh
+cd /home/manager/data/Data_Day4/data/out/
+```
+Now open R: 
+
 ```sh
 R
+```
+Generate the plot:
+
+```sh
+# Load necessary libraries
 library(dplyr)
 library(ggplot2)
+
+# Create a function to read the files and add ancestry information
 freq <-read.table("plink.frq.strat", header =T)
 plotDat <- freq %>%
   mutate(AlleleFrequency = cut(MAF, seq(0, 1, 0.25))) %>%
   group_by(AlleleFrequency, CLST) %>%
   summarise(FractionOfSNPs = n()/nrow(freq) * 100)
 
-ggplot(na.omit(plotDat),
-       aes(AlleleFrequency, FractionOfSNPs, group = CLST, col = CLST)) +
+# Create a bar graph 
+png('/home/manager/data/Data_Day4/data/out/MAF_ancestry_analysis.png', unit='px', res=300, width=3500, height=4500)
+
+maf_ancestry <- ggplot(na.omit(plotDat),
+  aes(AlleleFrequency, FractionOfSNPs, group = CLST, col = CLST)) +
   geom_line() +
   scale_y_continuous(limits = c(0, 12)) +
   ggtitle("Distribution of allele frequency across genome")
+
+print(maf_ancestry)
+
+dev.off()
 ```
+
+Examine the plot the MAF across each ancestry: 
+
+```sh
+xdg-open MAF_ancestry_analysis.png
+```
+
 #### **Questions**
 ##### (i) Which population has the most SNPs?
 ##### (ii) What  is the significance of the observed population ordering?
