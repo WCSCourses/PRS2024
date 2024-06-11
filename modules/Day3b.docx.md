@@ -224,7 +224,7 @@ done
 
 **Set up the necessary environment variables for threading and verify they are set correctly.**
 ```
-export N_THREADS=10
+export N_THREADS=4
 export MKL_NUM_THREADS=$N_THREADS
 export NUMEXPR_NUM_THREADS=$N_THREADS
 export OMP_NUM_THREADS=$N_THREADS
@@ -275,18 +275,12 @@ for chr in {1..22}; do
 done
 
 ```
-**Check the job file contains the correct commands.**
-```
-head multithread_job.sh
-```
-**Run the Job File with GNU Parallel:**
+
+**Run the Job File with GNU Parallel:** (May take a while)
 ```
 parallel --verbose --jobs $N_THREADS < multithread_job.sh
 ```
-**If the above command does not work you can create an alternative version of the same script by running the following:**
-```
-./script/create_multithread.sh
-```
+
 <br>
 
 Step 3: Combine CSX-derived SNP weights across chromosomes (Currently Excludes Chromosome 3)
