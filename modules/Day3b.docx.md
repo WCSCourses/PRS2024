@@ -162,16 +162,7 @@ To model the coupling of effect sizes at individual SNPs across ancestries PRS-C
   
 **Step 1: Set up environment**
 ------------------------------
-Before starting the practical the following fixes will need to be applied from within your virtual machine
-```
-# conda create -n "PRScsx" python=3.7
-# conda activate PRScsx
-# pip install scipy
-# pip install h5py
-```
 
-**still with the set up**
-------------------------------
 First change to the working directory with the data for this practical 
 ```sh
 cd /home/manager/data/Data_Day4/data
