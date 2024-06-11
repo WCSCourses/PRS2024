@@ -195,22 +195,31 @@ nano create_multithread.sh
 ```
 Then copy and paste the code below into that script. After save, then close the script ctrl + x  
 
-```
-for chr in {21..22}; do
+```sh
+#!/bin/bash
+
+# Create the script file
+SCRIPT_FILE="multithread_job.sh"
+
+# Write the header of the script file
+echo "#!/bin/bash" > $SCRIPT_FILE
+
+for chr in {1..22}; do
   echo "python3 /home/manager/data/Data_Day4/software/PRScsx.py \
-	--ref_dir=/home/manager/data/Data_Day4/reference/csx \
-	--bim_prefix=/home/manager/data/Data_Day4/data/hm3_by_ancestry/AFR_1kg.hm3.chr${chr}_only.csx \
-	--sst_file=/home/manager/data/Data_Day4/data/3b/data/sumstats_by_chr/sumstats_by_chr/EUR-SBP-simulated.sumstats.chr${chr},./home/manager/data/Data_Day4/data/3b/data/sumstats_by_chr/AFR-SBP-simulated.sumstats.chr${chr} \
-	--n_gwas=25732,4855 \
-	--chrom=$chr \
-	--n_iter=1000 \
-	--n_burnin=500 \
-	--thin=5 \
-	--pop=EUR,AFR \
-	--phi=1e-4 \
-	--out_dir=/home/manager/data/Data_Day4/out/csx \
-	--out_name=afr.target_chr${chr}.csx" >> multithread_job.sh
+        --ref_dir=/home/manager/data/Data_Day4/reference/csx \
+        --bim_prefix=/home/manager/data/Data_Day4/data/hm3_by_ancestry/AFR_1kg.hm3.chr${chr}_only.csx \
+        --sst_file=/home/manager/data/Data_Day4/data/3b/data/sumstats_biobank_eur_chr${chr}.txt,/home/manager/data/Data_Day4/data/3b/data/sumstats_biobank_afr_chr${chr}.txt \
+        --n_gwas=25732,4855 \
+        --chrom=${chr} \
+        --n_iter=1000 \
+        --n_burnin=500 \
+        --thin=5 \
+        --pop=EUR,AFR \
+        --phi=1e-4 \
+        --out_dir=/home/manager/data/Data_Day4/out/csx \
+        --out_name=afr.target_chr${chr}.csx &" >> $SCRIPT_FILE
 done
+
 ```
 **Check the job file contains the correct commands.**
 ```
