@@ -332,7 +332,7 @@ library(ggplot2)
 library(snpStats)
 
 # Define the path to the directory containing the PLINK files and phenotypic data
-plink_path <- "/Users/iyegbc01/Dropbox/StatGen_OReilly_group/PRS_Summer_School/PRS_Summer_school_Wellcome_Trust_2023/Day4_WCS_2024_draft/data/"
+plink_path <- "/home/manager/data/Data_Day4/data/3b/data/"
 
 # Read PLINK files and phenotype data into R
 bim_file <- file.path(plink_path, "AFR_1kg.hm3.only.csx.bim")
