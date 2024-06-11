@@ -1,31 +1,41 @@
 ## Day 3b practical
-We shall be using the same data folder as Day3a, and another folder to be downloaded from github.
+We will be using the same data folder as Day3a, and another folder that will need to be downloaded from Github.
+
+Download the additional files from GitHub: 
+
 ```sh
 wget https://wcs_data_transfer.cog.sanger.ac.uk/3b.zip
 unzip 3b.zip
 ```
 
 ## Introduction to Cross-Ancestry PRS computation
-Before starting the practical the following commands will need to be run from within your virtual machine:
+Before starting the practical, the following commands will need to be run from within your virtual machine. 
+These commands set up an 'environment' that allows you to work outside the virtual machine, which has memory restrictions.
 
-(1) conda create -n "PRScsx" python=3.7
+Set up the environment using conda:
+``sh
+conda create -n "PRScsx" python=3.7
+conda activate PRScsx
+pip install scipy
+pip install h5py
+```
 
-(2) conda activate PRScsx
+The aim of this practical is to provide you with a basic understanding and some experience of running PRS-CSx software. After completing this practical, you should:
 
-(3) pip install scipy
-
-(4) pip install h5py
-
- The goal of this practical is to provide you with basic understanding and experience of running the PRS-CSx software. After completing this practical, you should:
-* Be able to perform cross-population descriptives.
+* Be able to perform cross-population analyses.
 * Be familiar with running cross-ancestry PRS analyses using PRS-CSx.
-* Understand how to evaluate linear models using Akaike’s Information Criterion
+* Understand how to evaluate linear models using Akaike’s Information Criterion.
 
 #### 1. The 1000 Genomes datasetS
-The data we will be working with are coming from the 1000 Genomes Project reference panel. The data relates to individuals from 26 different source populations around the world. For simplicity, the populations have been collapsed into 5 broader continental super-populations: East Asian, European, South Asian, Amerindian, African ((EAS, EUR, SAS, EUR and AFR)). The scripts used to download and process the 1000Genomes data for the purposes of this course will be provided in the course appendix at the end of this week. 
+The data we will be working with comes from the 1000 Genomes Project reference panel. The data relates to individuals from 26 different source populations around the world. For simplicity, the populations have been collapsed into 5 broader continental super-populations: East Asian, European, South Asian, Amerindian, African ((EAS, EUR, SAS, EUR and AFR)).
+
+The scripts used to download and process the 1000Genomes data for the purposes of this course will be provided in the course appendix at the end of this week. 
 
 #### 2. Cross-population allele frequency
-Genetic variation is conveyed using allelic frequencies. Allele frequency is shaped by evolutionary forces and drift.  Here we compare profiles of allele frequency across the five ancestral populations. Global differences in allelic frequency has important implications for the portability of PRS across populations. Using plink it is possible to generate allele frequency statistics for each SNP, across populations, using the annotations provided in the file pop_info.pheno. In _/home/manager/data/Data_Day4_:
+Genetic variation is conveyed using allelic frequencies. Allele frequency is shaped by evolutionary forces and drift.  Here we compare profiles of allele frequency across the five ancestral populations. Global differences in allelic frequency has important implications for the portability of PRS across populations.
+
+Using plink it is possible to generate allele frequency statistics for each SNP, across populations, using the annotations provided in the *file pop_info.pheno*. In *_/home/manager/data/Data_Day4_*:
+
 ```sh
 ./software/plink_linux --bfile ./data/chr1-22 --freq --within ./data/pop_info.pheno
 ```
