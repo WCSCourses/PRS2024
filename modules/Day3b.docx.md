@@ -78,11 +78,12 @@ Number of SNPs with MAF > 0 in SAS.
 ```sh
 grep -F 'SAS' plink.frq.strat | awk '$6 >0' | wc -l
 ```
+
 **AFR**
 ```sh
 grep -F 'AFR' plink.frq.strat | wc -l
 ```
-Number of SNPs with MAF > 0 in EAS.
+Number of SNPs with MAF > 0 in AFR.
 ```sh
 grep -F 'AFR' plink.frq.strat | awk '$6 >0' | wc -l
 ```
