@@ -507,6 +507,7 @@ xdg-open PRS_ancestry_analysis.png
 
 <details>
   <summary>Explain the results? Are they as expected?</summary>
+  THINK - PAIR - SHARE
    </details>
 
 >
