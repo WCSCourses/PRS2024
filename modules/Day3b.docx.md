@@ -13,7 +13,7 @@ Before starting the practical, the following commands will need to be run from w
 These commands set up an 'environment' that allows you to work outside the virtual machine, which has memory restrictions.
 
 Set up the environment using conda:
-``sh
+```sh
 conda create -n "PRScsx" python=3.7
 conda activate PRScsx
 pip install scipy
