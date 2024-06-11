@@ -39,13 +39,15 @@ Using plink it is possible to generate allele frequency statistics for each SNP,
 ```sh
 ./software/plink_linux --bfile ./data/chr1-22 --freq --within ./data/pop_info.pheno
 ```
-Population-stratified allele frequencies are reported in the output file plink.frq.strat.
+Population-stratified allele frequencies are reported in the output file **plink.frq.strat.**
 For each population, print the numbers of total SNPs to screen, as follows:
+
 **AFR**
 ```sh
 grep -F 'AFR' plink.frq.strat | wc -l
 ```
 From there we can print the number of SNPs with minor allele frequencies greater than 0 (and are hence potentially available for genomic analyes).
+
 ```sh
 grep -F 'AFR' plink.frq.strat | awk '$6 >0' | wc -l
 ```
@@ -67,6 +69,7 @@ Number of SNPs with MAF > 0 in EAS.
 ```sh
 grep -F 'EAS' plink.frq.strat | awk '$6 >0' | wc -l
 ```
+
 **SAS**
 ```sh
 grep -F 'SAS' plink.frq.strat | wc -l
@@ -88,6 +91,7 @@ grep -F 'AFR' plink.frq.strat | awk '$6 >0' | wc -l
 ##### (i) Which population contains the most SNPs?
 ##### (ii) What  is the significance of the observed population order?  
 &nbsp;
+
 #### 3. Distribution of allele frequencies
 ```sh
 R
@@ -110,8 +114,10 @@ ggplot(na.omit(plotDat),
 ##### (ii) What  is the significance of the observed population ordering?
 ##### (iii) What is the reason behind these two features?
 &nbsp;
+
 #### 4. Calculation of Fst
 Fst is a formal metric which is used to convey the level of genetic divergence between populations (on a scale between 0 and 1), using information derived from a set of genome-wide and mutually independent SNPs. Fst between parwise populations is estimated efficiently in Plink-2. So first we need to download Plink-2 using the command below:
+
 ```sh
 sudo apt install plink2
 ```
