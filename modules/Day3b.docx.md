@@ -1,7 +1,8 @@
 ## Day 3b practical
 We shall be using the same data folder as Day3a, and another folder to be downloaded from github.
 ```sh
-wget [**link**](https://drive.google.com/drive/home)
+wget https://wcs_data_transfer.cog.sanger.ac.uk/3b.zip
+unzip 3b.zip
 ```
 
 ## Introduction to Cross-Ancestry PRS computation
