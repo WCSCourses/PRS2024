@@ -150,24 +150,8 @@ xdg-open MAF_ancestry_analysis.png
 ##### (i) Which population has the most SNPs?
 ##### (ii) What  is the significance of the observed population ordering?
 ##### (iii) What is the reason behind these two features?
-&nbsp;
 
-#### 4. Calculation of Fst
-Fst is a formal metric which is used to convey the level of genetic divergence between populations (on a scale between 0 and 1), using information derived from a set of genome-wide and mutually independent SNPs. Fst between parwise populations is estimated efficiently in Plink-2. So first we need to download Plink-2 using the command below:
 
-```sh
-sudo apt install plink2
-```
-A higher Fst corresponds to greater divergence between populations. Use the following command to calculate Fst:
-```sh
-plink2 --bfile ./data/chr1-22 --fst POP --pheno ./data/pop_info.pheno
-```
-Check the output file plink2.fst.summary
-
-#### **Questions**
-##### (i) Which population pairs have the highest Fst ?
-##### (ii) For which populations is Fst smallest??
-&nbsp;
 ## Introduction to PRS-CSx
 #### 5. Background to PRS-CSX
 PRS-CSx is a Python based command line tool that integrates GWAS summary statistics and external LD reference panels from multiple populations to improve cross-population polygenic prediction. We will be using simulated trait data pertaininng to systolic blood pressure (SBP) to explore PRS performance using 2 target populations that consist of 650 individuals of African ancestry and 500 individuals of European ancestry. Please note when running PRSice that the object of the flag "--prsice" will change according to whether plink is being called within the linux-like environment of the virtual machine (PRSice_linux) or a mac (PRSice_mac). Both executables can be found in the _/home/manager/data/Data_Day4_ directory. 
