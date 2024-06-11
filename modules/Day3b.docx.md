@@ -1,8 +1,8 @@
 ## Day 3b practical
-
-7. [Introduction to cross-ancestry PRS computation](#Cross-ancestry-PRS-computation)
-  8. [Cross-ancestry PRS analysis using PRS-CSx](#Cross-ancestry-PRS-computation)
-
+We shall be using the same data folder as Day3a, and another folder to be downloaded from github.
+```sh
+wget **link**
+```
 
 ## Introduction to Cross-Ancestry PRS computation
 Before starting the practical the following commands will need to be run from within your virtual machine:
