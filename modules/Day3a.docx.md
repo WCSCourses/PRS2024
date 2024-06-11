@@ -356,12 +356,12 @@ Rscript /home/manager/PRSice_linux/PRSice.R \
 --pheno /home/manager/data/Data_Day4/data/sbp_afr_1kg.sim_pheno \
 --pheno-col pheno50 \
 --thread 8 \
---out /home/manager/data/Data_Day4/out/SBP.afr.afr
+--out /home/manager/data/Data_Day4/data/out/SBP.afr.afr
 ```
 View the output file:
 
 ```sh
-cat /home/manager/data/Data_Day4/out/SBP.afr.afr.summary
+cat /home/manager/data/Data_Day4/data/out/SBP.afr.afr.summary
 ```
 
 **QUESTIONS** 
@@ -397,12 +397,12 @@ Rscript /home/manager/PRSice_linux/PRSice.R \
 --pheno /home/manager/data/Data_Day4/data/sbp_afr_1kg.sim_pheno \
 --pheno-col pheno50 \
 --thread 8 \
---out /home/manager/data/Data_Day4/out/SBP.eur.afr
+--out /home/manager/data/Data_Day4/data/out/SBP.eur.afr
 ```
 
 View the output file: 
 ```sh
-cat /home/manager/data/Data_Day4/out/SBP.eur.afr.summary 
+cat /home/manager/data/Data_Day4/data/out/SBP.eur.afr.summary 
 ```
 
 **QUESTIONS** 
