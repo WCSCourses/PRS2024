@@ -432,14 +432,14 @@ We will use R for visualisation.
 
 **Open a new terminal and open R**
 
-Open a new tab in ther terminal (**plus icon in the top left corner**)
+Open a new tab in the terminal (**plus icon in the top left corner**)
 
-In this new terminal window, make sure you are in the out directory
+In this new terminal window, make sure you are in the 'out' directory:
 
 ```sh
 cd /home/manager/data/Data_Day4/data/out/
 ```
-Now open R 
+Now open R: 
 
 ```sh
 R
