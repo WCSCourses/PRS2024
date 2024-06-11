@@ -348,15 +348,27 @@ Before starting the practical the following fixes will need to be applied from w
 
 **Step 1: Set up environment**
 ------------------------------
+First change to the working directory with the data for this practical 
+```sh
+cd /home/manager/data/Data_Day4/data
+```
+Make a directory called **hm3_by_ancestry** within the data folder, and move a folder back out of the data folder
+
+```sh
+mkdir hm3_by_ancestry
+cd ..
+```
 
 **AFR**
 ```
+for chr in {1..22}; do /home/manager/data/Data_Day4/software/plink_linux --bfile /home/manager/data/Data_Day4/data/AFR_1kg.hm3.only.csx --chr $chr --make-bed --out /home/manager/data/Data_Day4/data/hm3_by_ancestry/AFR_1kg.hm3.chr${chr}_only.csx; done
+
 for chr in {1..22}; do \
-./software/plink_mac \
-	--bfile ./data/AFR_1kg.hm3.only.csx \
+/home/manager/data/Data_Day4/software/plink_linux \
+	--bfile /home/manager/data/Data_Day4/data/AFR_1kg.hm3.only.csx \
 	--chr $chr \
 	--make-bed \
-	--out ./data/hm3_by_ancestry/AFR_1kg.hm3.chr${chr}_only.csx;
+	--out /home/manager/data/Data_Day4/data/hm3_by_ancestry/AFR_1kg.hm3.chr${chr}_only.csx;
 done
 ```
 
