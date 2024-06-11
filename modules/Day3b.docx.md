@@ -34,7 +34,7 @@ The scripts used to download and process the 1000Genomes data for the purposes o
 #### 2. Cross-population allele frequency
 Genetic variation is conveyed using allelic frequencies. Allele frequency is shaped by evolutionary forces and drift.  Here we compare profiles of allele frequency across the five ancestral populations. Global differences in allelic frequency has important implications for the portability of PRS across populations.
 
-Using plink it is possible to generate allele frequency statistics for each SNP, across populations, using the annotations provided in the **file pop_info.pheno**. In **_/home/manager/data/Data_Day4_**:
+Using plink it is possible to generate allele frequency statistics for each SNP, across populations, using the annotations provided in the **file pop_info.pheno**. In _/home/manager/data/Data_Day4_:
 
 ```sh
 ./software/plink_linux --bfile ./data/chr1-22 --freq --within ./data/pop_info.pheno
