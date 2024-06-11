@@ -401,12 +401,13 @@ Step 2: Run CSX. Derive new SNPs weights trained on European and African summary
 --------------------------------------------------------------------------------------
 
 **Generate job file containing the threaded PRScsx commands.**
+
 ```
 for chr in {21..22}; do
-  echo "python3 ./software/PRScsx.py \
-	--ref_dir=./reference/csx \
-	--bim_prefix=./data/hm3_by_ancestry/AFR_1kg.hm3.chr${chr}_only.csx \
-	--sst_file=./data/sumstats_by_chr/EUR-SBP-simulated.sumstats.chr${chr},./data/sumstats_by_chr/AFR-SBP-simulated.sumstats.chr${chr} \
+  echo "python3 /home/manager/data/Data_Day4/software/PRScsx.py \
+	--ref_dir=/home/manager/data/Data_Day4/reference/csx \
+	--bim_prefix=/home/manager/data/Data_Day4/data/hm3_by_ancestry/AFR_1kg.hm3.chr${chr}_only.csx \
+	--sst_file=/home/manager/data/Data_Day4/data/3b/data/sumstats_by_chr/sumstats_by_chr/EUR-SBP-simulated.sumstats.chr${chr},./home/manager/data/Data_Day4/data/3b/data/sumstats_by_chr/AFR-SBP-simulated.sumstats.chr${chr} \
 	--n_gwas=25732,4855 \
 	--chrom=$chr \
 	--n_iter=1000 \
@@ -414,7 +415,7 @@ for chr in {21..22}; do
 	--thin=5 \
 	--pop=EUR,AFR \
 	--phi=1e-4 \
-	--out_dir=./out/csx \
+	--out_dir=/home/manager/data/Data_Day4/out/csx \
 	--out_name=afr.target_chr${chr}.csx" >> multithread_job.sh
 done
 ```
