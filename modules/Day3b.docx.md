@@ -123,10 +123,8 @@ PRS-CSx is a Python based command line tool that integrates GWAS summary statist
 To model the coupling of effect sizes at individual SNPs across ancestries PRS-CSx uses an MCMC (Bayesian) sampling algorithm to determine values of the global shrinkage parameter ("phi") by Maximum likelihood. For samples of mixed or admixed genetic ancestry (which ours are not) the optimal value of the shrinkage parameter is estimated autonomously from the data. Here we use the value of phi (1e-4), which is suggested by the software authors, given that our trait is simulated to have a relatively small number (N=110) causal variants, distributed genome-wide.
 To save time, we will be running the analyses across chromosome 15, rather than the entire genome. The commands needed to run PRS-CSx are contained in two script files, located in /home/manager/data/Data_Day4/scripts.  
 
-**New Day 3b**
-
-**Set up PRS-CSX environment (Not needed)**
----------------
+**Step 1: Set up environment**
+------------------------------
 Before starting the practical the following fixes will need to be applied from within your virtual machine
 ```
 # conda create -n "PRScsx" python=3.7
@@ -135,7 +133,7 @@ Before starting the practical the following fixes will need to be applied from w
 # pip install h5py
 ```
 
-**Step 1: Set up environment**
+**still with the set up**
 ------------------------------
 First change to the working directory with the data for this practical 
 ```sh
