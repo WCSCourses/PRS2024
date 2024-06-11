@@ -240,10 +240,25 @@ For illustrative purposes, this table uses the first scenario, EUR base and EUR 
 </details>
 
 
+
+
 **QUESTIONS** 
+
+Move to the out directory you created earlier:
+
+```sh
+cd out
+```
+
+Look at the files produced following your first analyis within the directory: 
+
+```sh
+ls -l
+```
 
 <details>
   <summary>How many files have been generated from this code and what does each file show you?</summary>
+
   
   This code generates six files. Each files serves a different purpose in the analysis and interpretation of derived PRS.
   These are outlined below: 
@@ -318,6 +333,13 @@ Number of SNPs = 389.
 
 
 #### Scenario 2: Predicting from AFR training to AFR target data:
+
+Return to the data directory:
+
+```sh
+cd ..
+```
+
 
 ```sh
 Rscript /home/manager/PRSice_linux/PRSice.R \
