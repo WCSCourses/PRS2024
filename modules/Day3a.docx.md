@@ -382,6 +382,7 @@ cat /home/manager/data/Data_Day4/data/out/SBP.afr.afr.summary
 </details>
 
 #### Scenario 3: Predicting from EUR training to AFR target data
+
 ```sh
 Rscript /home/manager/PRSice_linux/PRSice.R \
 --prsice /home/manager/PRSice_linux/PRSice \
@@ -401,6 +402,7 @@ Rscript /home/manager/PRSice_linux/PRSice.R \
 ```
 
 View the output file: 
+
 ```sh
 cat /home/manager/data/Data_Day4/data/out/SBP.eur.afr.summary 
 ```
@@ -426,10 +428,18 @@ cat /home/manager/data/Data_Day4/data/out/SBP.eur.afr.summary
 ## Exercise 2 Visualising and comparing R<sup>2</sup>
 
 In this exercise, we will analyse and compare the phenotypic variance explained (R<sup>2</sup>) by PRS across different combinations of base and target ancestries. 
+We will use R for visualisation.
 
-Open a new tab in ther terminal (plus icon in the top left corner)
+**Open a new terminal and open R**
 
-In this new terminal window, open R 
+Open a new tab in ther terminal (**plus icon in the top left corner**)
+
+In this new terminal window, make sure you are in the out directory
+
+```sh
+cd /home/manager/data/Data_Day4/data/out/
+```
+Now open R 
 
 ```sh
 R
@@ -497,8 +507,7 @@ xdg-open PRS_ancestry_analysis.png
 
 <details>
   <summary>Explain the results? Are they as expected?</summary>
-   xxx.
-</details>
+   </details>
 
 >
 > ‼️ Note that all target phenotype data in this workshop are **simulated**. They have no specific biological meaning and are for demonstration purposes only. 
