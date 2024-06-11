@@ -286,7 +286,8 @@ write.table(combined_data, output_file, sep = "\t", row.names = FALSE, col.names
 **Prepare data**
 
 ```
-# Load libraries
+# Load libraries. For any unailable package, install it with **install.packages("_package_name")**
+
 library(data.table)
 library(ggplot2)
 library(snpStats)
