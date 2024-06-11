@@ -26,7 +26,7 @@ The aim of this practical is to provide you with a basic understanding and some 
 * Be familiar with running cross-ancestry PRS analyses using PRS-CSx.
 * Understand how to evaluate linear models using Akaike’s Information Criterion.
 
-#### 1. The 1000 Genomes datasetS
+#### 1. The 1000 Genomes datasets
 The data we will be working with comes from the 1000 Genomes Project reference panel. The data relates to individuals from 26 different source populations around the world. For simplicity, the populations have been collapsed into 5 broader continental super-populations: East Asian, European, South Asian, Amerindian, African ((EAS, EUR, SAS, EUR and AFR)).
 
 The scripts used to download and process the 1000Genomes data for the purposes of this course will be provided in the course appendix at the end of this week. 
