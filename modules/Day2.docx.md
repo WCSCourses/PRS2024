@@ -279,7 +279,7 @@ This command takes the Height GWAS summary statistic file (\--base), informs PRS
 > To see a full list of command line options available in PRSice, type: 
 > 
 >  ```
-> ~/PRSice_linux/ PRSice
+> ~/PRSice_linux/PRSice
 >  ```
 >  
 >  Take some time to have a look through some of these user options. By looking at the user options, work out which user option or options were used to ensure that the command above only calculated 1 PRS at genome-wide significance of \< 5*×*10<sup>−8</sup>.
