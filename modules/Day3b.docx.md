@@ -1,7 +1,7 @@
 ## Day 3b practical
-We will be using the same data folder as Day3a, and another folder that will need to be downloaded from Github.
+We will be using the same data folder as Day3a, and another folder that will need to be downloaded from GitHub.
 
-Download the additional files from GitHub: 
+Download the additional file from GitHub: 
 
 ```sh
 wget https://wcs_data_transfer.cog.sanger.ac.uk/3b.zip
