@@ -337,7 +337,7 @@ Number of SNPs = 389.
 Return to the data directory:
 
 ```sh
-cd ..
+cd /home/manager/data/Data_Day4/data
 ```
 
 
@@ -359,6 +359,7 @@ Rscript /home/manager/PRSice_linux/PRSice.R \
 --out /home/manager/data/Data_Day4/out/SBP.afr.afr
 ```
 View the output file:
+
 ```sh
 cat /home/manager/data/Data_Day4/out/SBP.afr.afr.summary
 ```
