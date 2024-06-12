@@ -20,7 +20,11 @@ https://github.com/tinashedoc/cvx/blob/main/monodta.txt
 
 ### Group 2
 
+https://github.com/tinashedoc/cvx/blob/main/wbcdta.txt
+
 ### Group 3
+
+https://github.com/tinashedoc/cvx/blob/main/pltdta.txt
 
 ### Group 4
 
