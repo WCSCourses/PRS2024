@@ -121,6 +121,10 @@ R
 Generate the plot:
 
 ```sh
+# Install the necessary libraries
+install.packages("dplyr")
+install.packages("ggplot2")
+
 # Load necessary libraries
 library(dplyr)
 library(ggplot2)
