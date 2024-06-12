@@ -424,8 +424,8 @@ Step 6: Prepare the regression model input using the CSX-derived AFR and EUR wei
 -------------------------------------------------------------------------------------
 ```
 # Read the merged CSX output files
-AFR_betas <- fread(file.path(plink_path, "../out/csx/combined_AFR_pst_.txt"), sep = "\t", header = TRUE)
-EUR_betas <- fread(file.path(plink_path, "../out/csx/combined_EUR_pst_.txt"), sep = "\t", header = TRUE)
+AFR_betas <- fread(file.path("/home/manager/data/Data_Day4/out/csx/combined_AFR_pst_eff.txt"), sep = "\t", header = TRUE)
+EUR_betas <- fread(file.path("/home/manager/data/Data_Day4/out/csx/combined_EUR_pst_eff.txt"), sep = "\t", header = TRUE)
 
 # Assuming the beta files have columns: "CHR", "rsid", "pos", "ref", "alt", "beta"
 overlap_prs <- merge(AFR_betas, EUR_betas, by = "rsid", suffixes = c("_afr", "_eur"))
