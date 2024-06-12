@@ -334,7 +334,9 @@ write.table(combined_data, output_file, sep = "\t", row.names = FALSE, col.names
 **Prepare data**
 
 ```
-# Load libraries. For any unailable package, install it with **install.packages("_package_name")**
+# Load libraries. For any unavailable package, install it with **install.packages("_package_name")**
+install.packages("BiocManager")
+BiocManager::install("snpStats")
 
 library(data.table)
 library(ggplot2)
