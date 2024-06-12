@@ -24,7 +24,7 @@ install.packages(“data.table”)
 install.packages(“panelr”)" > rscript_packages.R
 
 #run R install
-R rscript_packages.R
+Rscript rscript_packages.R
 
 #intalling bcf tools
 
