@@ -130,7 +130,7 @@ library(dplyr)
 library(ggplot2)
 
 # Create a function to read the files and add ancestry information
-freq <-read.table("plink.frq.strat", header =T)
+freq <-read.table("~/data/Data_Day4/plink.frq.strat", header =T)
 plotDat <- freq %>%
   mutate(AlleleFrequency = cut(MAF, seq(0, 1, 0.25))) %>%
   group_by(AlleleFrequency, CLST) %>%
