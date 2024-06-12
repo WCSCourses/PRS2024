@@ -9,10 +9,7 @@ gunzip  Downloads/cmake-3.29.4.tar.gz
 sudo apt-get -y install cmake
 
 ##R packages
-SCRIPT_FILE="rscript_packages.R"
-
-echo "" > $SCRIPT_FILE
-Install.packages(“Rcpp”) # Required package before “reshape2 package” installation
+echo "Install.packages(“Rcpp”) # Required package before “reshape2 package” installation
 Install.packages(“reshape2”)
 install.packages(“viridisLite”)# Required before installing “viridis”
 install.packages(“viridis”)
@@ -24,10 +21,7 @@ install.packages(“vcfR”)
 install.packages(“memuse”)
 install.packages(“panelr”)
 install.packages(“data.table”)
-install.packages(“panelr”)
-install.packages(“panelr”)
-install.packages(“panelr”)
-install.packages(“panelr”) >> $SCRIPT_FILE
+install.packages(“panelr”)" > rscript_packages.R
 
 #run R install
 R rscript_packages.R
