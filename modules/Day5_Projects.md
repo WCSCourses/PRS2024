@@ -12,15 +12,15 @@ You have just completed the Wellcome Connecting Science PRS course and are now a
 
 **Figure 1** Predictivity of various PRSs compared to PRSmix (Adopted Buu et al. 2024)
 
-# Group project data files
+## Group project data files
 
-## Group 1
+### Group 1
 
-## Group 2
+### Group 2
 
-## Group 3
+### Group 3
 
-## Group 4
+### Group 4
 
 
 
