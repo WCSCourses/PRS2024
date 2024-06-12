@@ -280,10 +280,9 @@ parallel --verbose --jobs $N_THREADS < multithread.sh
 Step 3: Combine CSX-derived SNP weights across chromosomes (Currently Excludes Chromosome 3)
 --------------------------------------------------------------------------------------------
 
-**Load necessary library**
-First install required R packages (skip if it already exists)
-```sh
-install.packages("dplyr")
+**Load R and the necessary library**
+```
+R
 ```
 Call in the package
 ```
