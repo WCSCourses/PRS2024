@@ -5,14 +5,6 @@ We need to move into the directory you will be working in;
 cd ~/data/Data_Day4/data
 ```
 
-Download the additional file from GitHub: 
-
-```sh
-wget https://wcs_data_transfer.cog.sanger.ac.uk/3b.zip
-unzip 3b.zip
-```
-
-
 ## Introduction to Cross-Ancestry PRS computation
 Before starting the practical, the following commands will need to be run from within your virtual machine. 
 These commands set up an 'environment' that allows you to work outside the virtual machine, which has memory restrictions.
