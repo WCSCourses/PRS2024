@@ -20,14 +20,14 @@ The 3 models are subsequently combined to produce a weighted PRS solution
 
 As well as applying each of the steps in sequence, models can also be run separately according to the needs of individual users. Here, we use the single-ancestry BridgePRS approach to train polygenic scores for an African target sample applying the Bayesian ridge regression approach of BridgePRS to shrink the effect size of SNPs derived from a European ancestry GWAS towards their true underlying values.
 
-### BridgePRS Scenario 1: Application of European GWAS weights to an African target group**
+### BridgePRS Scenario 1: Application of European GWAS weights to an African target group
 
-#### Create configuration file for the target-only analysis**
+#### Create configuration file for the target-only analysis
 In this example we will run BridgePRS across chromosomes 1 - 22. The first required step is to generate the configuration file to run the single ancestry BridgePRS analysis we wish to run. The following command should be run from the main directory:
 ```
 ./bridgePRS check pop -o out_config-AFR-single --pop AFR --sumstats_prefix data/pop_europe/sumstats/eur.chr --genotype_prefix data/pop_africa/genotypes/afr_genotypes --phenotype_file data/pop_africa/phenotypes/afr_pheno.dat
 ```
-BridgePRS produces on-screen information which tells you some of the tasks the software is doing behind the scenes.
+(BridgePRS produces on-screen information which tells you some of the tasks the software is doing behind the scenes).
 
 #### Questions
 From the on-screen output:
@@ -48,12 +48,10 @@ Now that we have our African configuration file prepared we are ready to perform
 ```
 
 #### Task
-Review the contents of the output directory  out_bridge-AFR-single/prs-single_AFRICA and subfolders
-
+- Review the contents of the output directory  out_bridge-AFR-single/prs-single_AFRICA and subfolders
 
 #### Questions
 4. What evidence can you see that the analysis was successfully executed?
-
 
 
 ### BridgePRS Scenario 2:  Prediction into African target data. using European and African summary statistics
@@ -68,40 +66,33 @@ BridgePRS is most commonly used to combine the power of a smaller ancestry-match
    this time around?
 
 #### Tasks
-
 - Incorporate the config path information into the code below
--Based on your-recent understanding of genetic distances between continental populations, choose a sensible    
-  value of --fst_ to reflect the genetic distance between Africans and Europeans. This extra information will help inform the prior  
-  distribution used to estimate the posterior effect weights in the target population. Do this before attempting to run the code given below
+- Based on your-recent understanding of genetic distances between continental populations, choose a sensible    
+  value of --fst_ to reflect the genetic distance between Africans and Europeans. This extra information will help
+  inform the prior distribution used to estimate the posterior effect weights in the target population. Do this before
+  attempting to run the code given below
 
-
-**Multi-ancestry BRIDGEPRS analysis:**
- - Add the relevant peices of information in the code below, before entering in your terminal.
+#### Multi-ancestry BRIDGEPRS analysis:
+Add the relevant peices of information in the code below, before entering in your terminal.
 ```
 ./bridgePRS easyrun go -o out_easyrun-EUR-AFR --config_files target.AFR.config base.EUR.config --fst --phenotype y
 ```
 
-
-**Tasks**
-
+#### Tasks
 - After running the code above navigate to the output directory: out_config-EUR-AFR-easyrun to inspect the results.
 - Open either of the 2 plots that you see in the directory.
 
+#### Questions
+6. In the summary plot which set of values expresses the correlation between the weights calculated by BridgePRS and
+   the beta weights from the initial GWASs?
+8. In which output directory will you find precise values for variance explained by the prs-combined-AFR model?
+9. What is the variance explained (exact) by the prs-combined-AFR model?
 
-
-**Questions**
-
-6. In the summary plot which set of values expresses the correlation between the weights calculated by BridgePRS and the beta weights from the initial GWASs?
-
-7. In which output directory will you find precise values for variance explained by the prs-combined-AFR model?
-
-8. What is the variance explained (exact) by the prs-combined-AFR model?
-
-**Short Quiz**
+### Short Quiz
 I have GWAS data and genotype/phenotype data for a cohort consisting of >2000 samples from a small East European population. 
 The population LD structure is unique and so I would like this information to be incorporated into my PRS prediction model. I additionally have GWAS and genotype/phenotype data from the UKB biobank that I want to include. How do I formulate the relevant Config files for the BridgePRS analysis?
 
-**File types**
+#### File types
 ```
 ukr/sumstats/ukr.sumstats.out
 ukr/genotypes/chr1.bed,bim,fam...chr22.bed,bin,fam,
@@ -110,7 +101,7 @@ ukb/sumstats/ukb.sumstats.gz
 ukb/genotypes/chr1.bed,bim,fam...chr22.bed,bin,fam
 ukb/phenotypes/ukb_test.dat, ukb/phenotypes/ukb_validation.dat
 ```
-**Answer**
+#### Answer
 ```
 Target config:
 POP=
