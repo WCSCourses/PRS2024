@@ -232,21 +232,13 @@ SCRIPT_FILE="multithread_job.sh"
 # Write the header of the script file
 echo "#!/bin/bash" > $SCRIPT_FILE
 
-#!/bin/bash
-
-# Create the script file
-SCRIPT_FILE="multithread_job.sh"
-
-# Write the header of the script file
-echo "#!/bin/bash" > $SCRIPT_FILE
-
 
 
 for chr in {1..22}; do
   echo "python3 /home/manager/data/Data_Day4/software/PRScsx.py \
         --ref_dir=/home/manager/data/Data_Day4/reference/csx \
         --bim_prefix=/home/manager/data/Data_Day4/data/hm3_by_ancestry/AFR_1kg.hm3.chr${chr}_only.csx \
-        --sst_file=/home/manager/data/Data_Day4/data/3b/data/sumstats_by_chr/EUR-SBP-simulated.sumstats.${chr},/home/manager/data/Data_Day4/data/3b/data/sumstats_by_chr/AFR-SBP-simulated.sumstats.${chr}
+        --sst_file=/home/manager/data/Data_Day4/data/3b/data/sumstats_by_chr/EUR-SBP-simulated.sumstats.chr${chr},/home/manager/data/Data_Day4/data/3b/data/sumstats_by_chr/AFR-SBP-simulated.sumstats.chr${chr} \
         --n_gwas=25732,4855 \
         --chrom=${chr} \
         --n_iter=1000 \
@@ -255,9 +247,8 @@ for chr in {1..22}; do
         --pop=EUR,AFR \
         --phi=1e-4 \
         --out_dir=/home/manager/data/Data_Day4/out/csx \
-        --out_name=afr.target_chr${chr}.csx &" >> $SCRIPT_FILE
+        --out_name=afr.target_chr${chr}.csx" >> $SCRIPT_FILE
 done
-
 ```
 
 **Run the Job File with GNU Parallel:** (May take a while)
