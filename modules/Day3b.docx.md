@@ -11,9 +11,6 @@ Download the additional file from GitHub:
 wget https://wcs_data_transfer.cog.sanger.ac.uk/3b.zip
 unzip 3b.zip
 ```
-```sh
-cd 3b
-```
 
 
 ## Introduction to Cross-Ancestry PRS computation
@@ -45,6 +42,7 @@ Genetic variation is conveyed using allelic frequencies. Allele frequency is sha
 Using plink it is possible to generate allele frequency statistics for each SNP, across populations, using the annotations provided in the **file pop_info.pheno**. In _/home/manager/data/Data_Day4_:
 
 ```sh
+cd ../
 ./software/plink_linux --bfile ./data/chr1-22 --freq --within ./data/pop_info.pheno
 ```
 Population-stratified allele frequencies are reported in the output file **plink.frq.strat.**
