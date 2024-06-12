@@ -568,8 +568,15 @@ R2 <- 1 - (deviance / deviance_null)
 print(paste("R2 =", R2))
 ```
 
+## Results
 
+graph:
 
+![](https://github.com/WCSCourses/PRS2024/blob/3f07962be8fc8915e8cde8666a4038f27c48fc83/images/image_afreur_merge.png)
+
+pdf true against pred
+
+![](https://github.com/WCSCourses/PRS2024/blob/3f07962be8fc8915e8cde8666a4038f27c48fc83/images/imagemerge_afrEur_pdf.png)
 
 
 
