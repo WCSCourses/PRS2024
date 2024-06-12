@@ -28,6 +28,8 @@ https://github.com/tinashedoc/cvx/blob/main/pltdta.txt
 
 ### Group 4
 
+https://github.com/tinashedoc/cvx/blob/main/eosdta.txt
+
 
 
   
