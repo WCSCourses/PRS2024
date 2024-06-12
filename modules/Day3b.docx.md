@@ -300,7 +300,7 @@ ancestry <- "EUR"
 ```
 combined_data <- data.frame()
 ```
-**Loop through chromosomes 1 to 22, (currently excluding chromosome 3)**
+**Loop through chromosomes 21 to 22, (currently excluding chromosome 3)**
 ```
 for (chr in setdiff(21:22, 3)) {
   # Construct the file name
