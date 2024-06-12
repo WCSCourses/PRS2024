@@ -1,5 +1,9 @@
 ## Day 3b practical
-We will be using the same data folder as Day3a, and another folder that will need to be downloaded from GitHub.
+We need to move into the directory you will be working in;
+
+```sh
+cd ~/data/Data_Day4/data
+```
 
 Download the additional file from GitHub: 
 
