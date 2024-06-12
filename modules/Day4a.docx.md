@@ -20,79 +20,54 @@ The 3 models are subsequently combined to produce a weighted PRS solution
 
 As well as applying each of the steps in sequence, models can also be run separately according to the needs of individual users. Here, we use the single-ancestry BridgePRS approach to train polygenic scores for an African target sample applying the Bayesian ridge regression approach of BridgePRS to shrink the effect size of SNPs derived from a European ancestry GWAS towards their true underlying values.
 
-**BridgePRS Scenario 1: Application of European GWAS weights to an African target group**
-------------------------------------------------------------------------------------------------------------------------
+### BridgePRS Scenario 1: Application of European GWAS weights to an African target group**
 
-**Create configuration file for the target-only analysis**
-
+#### Create configuration file for the target-only analysis**
 In this example we will run BridgePRS across chromosomes 1 - 22. The first required step is to generate the configuration file to run the single ancestry BridgePRS analysis we wish to run. The following command should be run from the main directory:
 ```
 ./bridgePRS check pop -o out_config-AFR-single --pop AFR --sumstats_prefix data/pop_europe/sumstats/eur.chr --genotype_prefix data/pop_africa/genotypes/afr_genotypes --phenotype_file data/pop_africa/phenotypes/afr_pheno.dat
 ```
-
 BridgePRS produces on-screen information which tells you some of the tasks the software is doing behind the scenes.
 
-**Questions**
-
+#### Questions
 From the on-screen output:
-
 1. Do you notice anything interesting in the way BridgePRS handled the phenotype file?
-
 2. How many phenotypes was BridgePRS able to identify in the phenotype file? in what way do these phenotypes differ?
+3. Which resulting files  been generated in ./out/save/ ?
 
-3.Which resulting files  been generated in ./out/save/ ?
-
-
-
-**Tasks**
-
-In order to run the next code snippet you will need to carry out the following edits using information contained in the on-screen output :
-
+#### Tasks
+In order to run the next code snippet you will need to carry out the following edits using information contained in the on-screen output:
 - Provide the file path of the newly created configuration file.
-
 - Swap the phenotype to the continuous version of the trait.
 
 
-
-**Single ancestry BridgePRS analysis:**
-
+### Single ancestry BridgePRS analysis:
 Now that we have our African configuration file prepared we are ready to perform the single-ancestry BridgePRS analysis
-
 ```
 ./bridgePRS prs-single run -o out_bridge-AFR-single --pop africa --config_files /sc/arion/projects/psychgen/projects/iyegbc01/BRIDGEPRS_WCS_2024/BridgePRS-TOY/out_config-AFR-single/save/primary.AFR.config --phenotype y
 ```
 
-**Task**
-
+#### Task
 Review the contents of the output directory  out_bridge-AFR-single/prs-single_AFRICA and subfolders
 
 
-**Questions**
-
+#### Questions
 4. What evidence can you see that the analysis was successfully executed?
 
 
 
-BridgePRS Scenario 2:  Prediction into African target data. using European and African summary statistics
----------------------------------------------------------------------------------------------------------------------------------------------
+### BridgePRS Scenario 2:  Prediction into African target data. using European and African summary statistics
 BridgePRS is most commonly used to combine the power of a smaller ancestry-matched GWAS with a much larger but genetically-distant GWAS population, for the purpose of maximising PRS prediction quality in under-served target populations.
 
-
-
-**Create configuration file for base and target populations**
-
+#### Create configuration file for base and target populations**
 ```
 ./bridgePRS check pops -o out_config-EUR-AFR-easyrun --pop AFR EUR --sumstats_prefix data/pop_africa/sumstats/afr.chr data/pop_europe/sumstats/eur.chr --sumstats_suffix .glm.linear.gz .glm.linear.gz --genotype_prefix data/pop_africa/genotypes/afr_genotypes --phenotype_file data/pop_africa/phenotypes/afr_pheno.dat
 ```
+#### Question
+5. Carefully check the information given in the on-screen output. How many different config files have been produced
+   this time around?
 
-
-**Question**
-
-5. Carefully check the information given in the on-screen output. How many different config files have been produced this time around?
-
-
-
-**Tasks**
+#### Tasks
 
 - Incorporate the config path information into the code below
 -Based on your-recent understanding of genetic distances between continental populations, choose a sensible    
