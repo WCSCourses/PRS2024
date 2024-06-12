@@ -1,15 +1,15 @@
-**BridgePRS**
+## BridgePRS
 
-**Learning Objectives**
-------------------------------------------------------------------------------------------------------------------------
+### Learning Objectives
 The goal of this practical is to implement the basic steps needed to implement multi-ancestry PRS models successfully using the BridgePRS software.
 
-By the end of this session participants will understand how to implement the 3 PRS models that are integral to the software, using the eas up the required configuration files used by the software
+By the end of this session participants will understand how to:
+- set up the configuration files used as input by the software.
+- edit and interact with BridgePRS via the command line. 
+- implement the 3 PRS models integral to the functionality of the software, using the integrative "easy run" function.
+- perform a single-ancestry version of the BridgePRS analysis
 
-By the end of this session participants will have gained an understanding of how to set up the required configuration files used by the software
-
-
-**Introduction to BridgePRS**
+### Introduction to BridgePRS
 BridgePRS is a Bayesian PRS method that integrates trans-ancestry GWAS summary statistics. Unlike the fine-mapping approach of PRS-CSx, BridgePRS retains all variants within loci to best tag causal variants shared across ancestries. The focus is on correctly estimating causal effect sizes, which is key when the goal is prediction, rather than on estimating their location. BridgePRS is most applicable to combining the information of a well-powered GWAS performed in a (discovery) population or populations not matched to the ancestry of the target sample, with a second GWAS of relatively limited power in a (target) population that is well-matched to the ancestry of the target sample.
 
 BridgePRS is first applied to a large discovery population GWAS, by running Bayesian ridge regression, at putative loci. The BridgePRS algorithm is trained according to 3 PRS models:
