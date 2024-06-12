@@ -209,7 +209,7 @@ done
 
 **Set up the necessary environment variables for threading and verify they are set correctly.**
 ```
-export N_THREADS=4
+export N_THREADS=2
 export MKL_NUM_THREADS=$N_THREADS
 export NUMEXPR_NUM_THREADS=$N_THREADS
 export OMP_NUM_THREADS=$N_THREADS
