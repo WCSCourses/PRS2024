@@ -90,7 +90,7 @@ Add the relevant peices of information in the code below, before entering in you
 
 ### Short Quiz
 I have GWAS data and genotype/phenotype data for a cohort consisting of >2000 samples from a small East European population. 
-The population LD structure is unique and so I would like this information to be incorporated into my PRS prediction model. I additionally have GWAS and genotype/phenotype data from the UKB biobank that I want to include. How do I formulate the relevant Config files for the BridgePRS analysis?
+The population LD structure is unique and so I would like this information to be incorporated into my PRS prediction model. I additionally have GWAS and genotype/phenotype data from the UKB biobank that I want to include. How should I formulate the relevant Config files for the BridgePRS analysis?
 
 #### File types
 ```
