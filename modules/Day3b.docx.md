@@ -231,10 +231,10 @@ First install 'parallel' which is required to run the script you will create nex
 ```sh
 sudo apt install parallel
 ```
-Next, to minimize computational resources and time, we should create a script to run the tasks in parallel. Make a script called **multithread.sh**
+Next, to minimize computational resources and time, we should create a script to run the tasks in parallel. Make a script called **create_multithread.sh**
 
 ```sh
-nano multithread.sh
+nano create_multithread.sh
 ```
 Then copy and paste the code below into that script. After save, then close the script ctrl + x  
 
