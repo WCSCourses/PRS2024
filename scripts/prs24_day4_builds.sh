@@ -9,17 +9,24 @@ gunzip  Downloads/cmake-3.29.4.tar.gz
 sudo apt-get -y install cmake
 
 ##R packages
-echo "Install.packages(“Rcpp”) # Required package before “reshape2 package” installation
-Install.packages(“reshape2”)
-install.packages(“viridisLite”)# Required before installing “viridis”
+echo "install.packages(“Rcpp”) # Required package before “reshape2 package” installation
+install.packages(“reshape2”)
+install.packages(“viridisLite”) # Required before installing “viridis”
 install.packages(“viridis”)
-install Bioconduct # Required package before “GenomicRanges” package installation
-install.packages(“GenomicRanges”)
+if (!require("BiocManager", quietly = TRUE))
+  install.packages("BiocManager")
+BiocManager::install(version = "3.18")
+if (!require("BiocManager", quietly = TRUE))
+    install.packages("BiocManager")
+
+BiocManager::install("GenomicRanges")
+#install Bioconduct # Required package before “GenomicRanges” package installation
+#install.packages(“GenomicRanges”)
 install.packages(“dplyr”)
 install.packages(“tidyr”)
 install.packages(“vcfR”)
 install.packages(“memuse”)
-install.packages(“panelr”)
+#install.packages(“panelr”)
 install.packages(“data.table”)
 install.packages(“panelr”)" > rscript_packages.R
 
