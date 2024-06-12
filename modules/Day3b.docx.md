@@ -153,6 +153,7 @@ dev.off()
 Examine the plot the MAF across each ancestry: 
 
 ```sh
+# This does not work when you are in R, ensure you out of R before running:
 xdg-open MAF_ancestry_analysis.png
 ```
 
