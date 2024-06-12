@@ -161,7 +161,7 @@ PRS-CSx is a Python based command line tool that integrates GWAS summary statist
 
 
 #### 7. Running PRS-CSx
-To model the coupling of effect sizes at individual SNPs across ancestries PRS-CSx uses an MCMC (Bayesian) sampling algorithm to determine values of the global shrinkage parameter ("phi") by Maximum likelihood. For samples of mixed or admixed genetic ancestry (which ours are not) the optimal value of the shrinkage parameter is estimated autonomously from the data. Here we use the value of phi (1e-4), which is suggested by the software authors, given that our trait is simulated to have a relatively small number (N=110) causal variants, distributed genome-wide.
+To model the coupling of ect sizes at individual SNPs across ancestries PRS-CSx uses an MCMC (Bayesian) sampling algorithm to determine values of the global shrinkage parameter ("phi") by Maximum likelihood. For samples of mixed or admixed genetic ancestry (which ours are not) the optimal value of the shrinkage parameter is estimated autonomously from the data. Here we use the value of phi (1e-4), which is suggested by the software authors, given that our trait is simulated to have a relatively small number (N=110) causal variants, distributed genome-wide.
   
 **Step 1: Set up environment**
 ------------------------------
@@ -304,7 +304,7 @@ combined_data <- data.frame()
 ```
 for (chr in setdiff(21:22, 3)) {
   # Construct the file name
-  file_name <- paste0("afr.target_chr", chr, ".csx_", ancestry, "_pst_eff_a1_b0.5_phi1e-04_chr", chr, ".txt")
+  file_name <- paste0("afr.target_chr", chr, ".csx_", ancestry, "_pst__a1_b0.5_phi1e-04_chr", chr, ".txt")
   file_path <- file.path(path, file_name)
   
   # Check if file exists before reading
@@ -322,7 +322,7 @@ for (chr in setdiff(21:22, 3)) {
 ```
 **Write the combined data to a new file**
 ```
-output_file <- file.path(path, paste0("combined_", ancestry, "_pst_eff.txt"))
+output_file <- file.path(path, paste0("combined_", ancestry, "_pst_.txt"))
 write.table(combined_data, output_file, sep = "\t", row.names = FALSE, col.names = TRUE, quote = FALSE)
 ```
 ### Task: Replace 'ancestry <- "EUR" ' with 'ancestry <- "AFR" ' and repeat the subsequent steps shown above
@@ -332,6 +332,16 @@ write.table(combined_data, output_file, sep = "\t", row.names = FALSE, col.names
 -------------------------------------
 
 **Prepare data**
+The data is slow to merge unless you split the input bim file into just chr21 and chr22 (Q- why are those faster?)
+
+```
+cd /home/manager/data/Data_Day4/data/3b/data/
+plink --bfile AFR_1kg.hm3.only.csx --chr 21 22 --make-bed --out AFR_1kg.hm3.only.csx_21_22
+```
+Start R with sudo rights to allow you to install
+```
+sudo R 
+```
 
 ```
 # Load libraries. For any unavailable package, install it with **install.packages("_package_name")**
@@ -346,9 +356,9 @@ library(snpStats)
 plink_path <- "/home/manager/data/Data_Day4/data/3b/data/"
 
 # Read PLINK files and phenotype data into R
-bim_file <- file.path(plink_path, "AFR_1kg.hm3.only.csx.bim")
-fam_file <- file.path(plink_path, "AFR_1kg.hm3.only.csx.fam")
-bed_file <- file.path(plink_path, "AFR_1kg.hm3.only.csx.bed")
+bim_file <- file.path(plink_path, "AFR_1kg.hm3.only.csx_21_22.bim")
+fam_file <- file.path(plink_path, "AFR_1kg.hm3.only.csx_21_22.fam")
+bed_file <- file.path(plink_path, "AFR_1kg.hm3.only.csx_21_22.bed")
 pheno_file <- file.path(plink_path, "sbp_afr_1kg.sim_pheno")
 
 # Read the genotype data using snpStats
@@ -414,8 +424,8 @@ Step 6: Prepare the regression model input using the CSX-derived AFR and EUR wei
 -------------------------------------------------------------------------------------
 ```
 # Read the merged CSX output files
-AFR_betas <- fread(file.path(plink_path, "../out/csx/combined_AFR_pst_eff.txt"), sep = "\t", header = TRUE)
-EUR_betas <- fread(file.path(plink_path, "../out/csx/combined_EUR_pst_eff.txt"), sep = "\t", header = TRUE)
+AFR_betas <- fread(file.path(plink_path, "../out/csx/combined_AFR_pst_.txt"), sep = "\t", header = TRUE)
+EUR_betas <- fread(file.path(plink_path, "../out/csx/combined_EUR_pst_.txt"), sep = "\t", header = TRUE)
 
 # Assuming the beta files have columns: "CHR", "rsid", "pos", "ref", "alt", "beta"
 overlap_prs <- merge(AFR_betas, EUR_betas, by = "rsid", suffixes = c("_afr", "_eur"))
@@ -480,7 +490,7 @@ Step 8: Predict phenotype on validation and test dataset
 --------------------------------------------------------
 **Generate a linear combination of AFR and EUR PRSs for each individual**
 ```
-# Each ancestry component is weighted by the regression coefficient of that ancestry, in the preceding step
+# Each ancestry component is weighted by the regression coicient of that ancestry, in the preceding step
 y_hat_vali <- a_hat * XWafr_vali_z + b_hat * XWeur_vali_z
 
 # In the test sample: 
