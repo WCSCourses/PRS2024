@@ -179,7 +179,7 @@ cd ..
 
 **AFR**
 ```
-for chr in {1..22}; do \
+for chr in {21..22}; do \
 /home/manager/data/Data_Day4/software/plink_linux \
 	--bfile /home/manager/data/Data_Day4/data/AFR_1kg.hm3.only.csx \
 	--chr $chr \
@@ -190,7 +190,7 @@ done
 
 **EUR**
 ```
-for chr in {1..22}; do \
+for chr in {21..22}; do \
 /home/manager/data/Data_Day4/software/plink_linux \
 	--bfile /home/manager/data/Data_Day4/data/EUR_1kg.hm3.only.csx \
 	--chr $chr \
