@@ -230,7 +230,7 @@ Then copy and paste the code below into that script. After save, then close the 
 #!/bin/bash
 
 # Create the script file
-SCRIPT_FILE="multithread_job.sh"
+SCRIPT_FILE="multithread.sh"
 
 # Write the header of the script file
 echo "#!/bin/bash" > $SCRIPT_FILE
