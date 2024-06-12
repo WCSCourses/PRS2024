@@ -137,7 +137,7 @@ plotDat <- freq %>%
   summarise(FractionOfSNPs = n()/nrow(freq) * 100)
 
 # Create a bar graph 
-png('/home/manager/data/Data_Day4/data/out/MAF_ancestry_analysis.png', unit='px', res=300, width=3500, height=4500)
+png('/home/manager/data/Data_Day4/out/MAF_ancestry_analysis.png', unit='px', res=300, width=3500, height=4500)
 
 maf_ancestry <- ggplot(na.omit(plotDat),
   aes(AlleleFrequency, FractionOfSNPs, group = CLST, col = CLST)) +
