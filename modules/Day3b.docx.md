@@ -111,7 +111,7 @@ Open a new tab in the terminal (**plus icon in the top left corner**)
 In this new terminal window, make sure you are in the correct directory:
 
 ```sh
-cd /home/manager/data/Data_Day4/data/out/
+cd /home/manager/data/Data_Day4/out/
 ```
 Now open R: 
 
