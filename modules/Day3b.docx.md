@@ -11,6 +11,10 @@ Download the additional file from GitHub:
 wget https://wcs_data_transfer.cog.sanger.ac.uk/3b.zip
 unzip 3b.zip
 ```
+```sh
+cd 3b
+```
+
 
 ## Introduction to Cross-Ancestry PRS computation
 Before starting the practical, the following commands will need to be run from within your virtual machine. 
