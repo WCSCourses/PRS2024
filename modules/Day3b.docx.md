@@ -302,7 +302,7 @@ combined_data <- data.frame()
 ```
 **Loop through chromosomes 1 to 22, (currently excluding chromosome 3)**
 ```
-for (chr in setdiff(1:22, 3)) {
+for (chr in setdiff(21:22, 3)) {
   # Construct the file name
   file_name <- paste0("afr.target_chr", chr, ".csx_", ancestry, "_pst_eff_a1_b0.5_phi1e-04_chr", chr, ".txt")
   file_path <- file.path(path, file_name)
