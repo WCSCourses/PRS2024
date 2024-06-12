@@ -227,10 +227,14 @@ Step 2: Run CSX. Derive new SNPs weights trained on European and African summary
 --------------------------------------------------------------------------------------
 
 **Generate job file containing the threaded PRScsx commands.**
-First, to minimize computational resources and time, we should create a script to run the tasks in parallel. Make a script called **create_multithread.sh**
+First install 'parallel' which is required to run the script you will create next
+```sh
+sudo apt install parallel
+```
+Next, to minimize computational resources and time, we should create a script to run the tasks in parallel. Make a script called **multithread.sh**
 
 ```sh
-nano create_multithread.sh
+nano multithread.sh
 ```
 Then copy and paste the code below into that script. After save, then close the script ctrl + x  
 
@@ -238,7 +242,7 @@ Then copy and paste the code below into that script. After save, then close the 
 #!/bin/bash
 
 # Create the script file
-SCRIPT_FILE="multithread_job.sh"
+SCRIPT_FILE="multithread.sh"
 
 # Write the header of the script file
 echo "#!/bin/bash" > $SCRIPT_FILE
@@ -264,7 +268,7 @@ done
 
 **Run the Job File with GNU Parallel:** (May take a while)
 ```
-parallel --verbose --jobs $N_THREADS < multithread_job.sh
+parallel --verbose --jobs $N_THREADS < multithread.sh
 ```
 
 <br>
