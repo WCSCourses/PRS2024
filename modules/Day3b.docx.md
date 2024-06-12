@@ -234,7 +234,7 @@ echo "#!/bin/bash" > $SCRIPT_FILE
 
 
 
-for chr in {1..22}; do
+for chr in {21..22}; do
   echo "python3 /home/manager/data/Data_Day4/software/PRScsx.py \
         --ref_dir=/home/manager/data/Data_Day4/reference/csx \
         --bim_prefix=/home/manager/data/Data_Day4/data/hm3_by_ancestry/AFR_1kg.hm3.chr${chr}_only.csx \
