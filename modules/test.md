@@ -1,13 +1,13 @@
 
 ## Day 4 - Practical 2: Introduction to Admixture analysis
 
-#### Module Goals
+### Module Goals
  The goal of this practical is to provide you with basic understanding of Admixture and the basic elements behind Admixture PRS scores. Upon completion of this practical, you should:
 * Gain familiarity with a variety of tools used in the context of admixed population research
 * Go through the basic steps of formulating admixture-informed polygenic risk scores
 
 
-#### Part1: Plot Decay of Ancestry LD over time
+### Part1: Plot Decay of Ancestry LD over time
 Here we explore how Admixture LD varies over time and as a function of the genetic distance between loci.
 ```
 R
@@ -59,14 +59,13 @@ ggplot(dtmat,
 ##### (i) Describe what happens to admixture LD over time?
 ##### (ii) Why does recombination also have an impact?
  
-#### Part 2: Global Ancestry Inference
+### Part 2: Global Ancestry Inference
 We will now run an analysis using the software ADMIXTURE to calculate global ancestry proportions across a sample of 28 individuals. Here we perform a supervised analysis. Please execute the following code from location ~/RFMIX_WCS_2024/data/plink/
  ```
  ./admixture samples_n28_qc_thin.bed 2 --supervised -j4 
 ```
 #### **Questions**
 ##### (i) What do you think the number specified after the inout file represents?
-
 
 The next step is to create a plot the results
 ```
@@ -109,12 +108,11 @@ The next step is to create a plot the results
  # Save the plot with specified dimensions
  ggsave("ancestry_plot.png", plot = p, width = 10, height = 6, units = "in", dpi = 300)
 ```
-#### **Questions**
+#### Questions
 ##### (i) What are the ancestry assignments of the 28 individuals? (Provide estimated proportions where necessary)
 
 
-
-#### Part 3: Local Ancestry Inference 
+### Part 3: Local Ancestry Inference 
 
 Next we will use the RFMix software to calculate local ancestry on chromosome 22 for the same 28 individuals. The RFMix algorithm uses an unsupervised learning algorithm.
 ```
@@ -126,12 +124,11 @@ for i in {22..22}; do
 ./software/rfmix -f ./data/rfmix/chr1-22_phased.bcf.gz -r ./reference/chr1-22.b.phase3_shapeit2_mvncall_integrated_v5a.20130502.genotypes.bcf.gz --analyze-range=26.86-31.80 -m ./data/rfmix/1KG_superpop_vs_ID.txt --chromosome=${i} -g ./reference/1kg_chr1-22.gmap --n-threads=4 -o ./out/rfmix/chr${i}.local_ancestry; done
 ```
 
-#### **Questions**
+#### Questions
 ##### (i) What information is provided in the simulation results table displayed on-screen ?
 
 
-
-#### Part 4: Plot local admixture on chromosome 22
+### Part 4: Plot local admixture on chromosome 22
 
 In this step we will plot the output from the previous RFMix run. Execute the following code from the home directory
 
@@ -211,15 +208,14 @@ plot <- ggplot(plot_data, aes(x = sgpos, xend = egpos, y = interaction(individua
 # Save the plot to a file
 ggsave("./out/rfmix/local_ancestry_chromosome22_5Mb_subregion.png", plot = plot, width = 10, height = 8)
 ```
-#### **Questions**
+#### Questions
 ##### (i) How many different continental ancestries do you see represented across the 58 strands?
 ##### (ii) Why is the number of different ancestry backgrounds higher than it was in the previous step?
 
 
+### Part 5: Formatting of admixture files for analysis using PRSice
 
-#### Part 5: Formatting of admixture files for analysis using PRSice
-
-##### Step 1 - Convert phased genotypes to GenomicRange format
+#### Step 1 - Convert phased genotypes to GenomicRange format
 ```
 # Run from the home directory
 
@@ -283,8 +279,7 @@ saveRDS(gr_obj_chr22, file = "./out/rfmix/chr22_phased_gr.rds")
 clean_memory(c("vcfr_inputfile_chr22", "extracted_haps22", "merge_chr22", "haps_df", "haps_dt", "snp_info_df", "chr22_haplo_long", "gr_obj_chr22"))
 ```
 
-
-#### Part 5: Step 2 - Merge genotypes from Step 1 with local ancestry calls by RFMix
+### Part 5: Step 2 - Merge genotypes from Step 1 with local ancestry calls by RFMix
 ```
 # Read in MSP file
 msp <- fread("./out/rfmix/chr22.local_ancestry.msp.tsv")
@@ -346,7 +341,6 @@ rm(list = c("chr22_haplo_gr", "chr22_haplo_long", "msp", "msp_gr", "chr22_rf", "
 gc()
 ```
 
-
 #### Part 5: Step 3 - Create separate Plink files
 ```
 # Partition genotype and local ancestry data
@@ -388,7 +382,6 @@ colnames(LA_final)[1:3] <- c("CHROM", "BP", "ID")
 write.table(geno_final, "./out/rfmix/chr22_geno.txt", row.names = FALSE, quote = FALSE)
 write.table(LA_final, "./out/rfmix/chr22_LA.txt", row.names = FALSE, quote = FALSE)
 ```
-
 
 #### Part 5: Step 4 - Use custom software (RFTransform) to create Plink files for input into PRSice
 ```
