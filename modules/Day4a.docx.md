@@ -44,7 +44,7 @@ In order to run the next code snippet you will need to carry out the following e
 ### Single ancestry BridgePRS analysis:
 Now that we have our African configuration file prepared we are ready to perform the single-ancestry BridgePRS analysis
 ```
-bridgePRS prs-single run -o out_bridge-AFR-single --pop africa --config_files /sc/arion/projects/psychgen/projects/iyegbc01/BRIDGEPRS_WCS_2024/BridgePRS-TOY/out_config-AFR-single/save/primary.AFR.config --phenotype y
+bridgePRS prs-single run -o out_config-AFR-single --pop africa --config_files out_config-AFR-single/save/primary.AFR.config --phenotype y
 ```
 
 #### Task
