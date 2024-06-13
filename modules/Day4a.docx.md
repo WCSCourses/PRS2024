@@ -20,7 +20,7 @@ The 3 models are subsequently combined to produce a weighted PRS solution
 
 As well as applying each of the steps in sequence, models can also be run separately according to the needs of individual users. Here, we use the single-ancestry BridgePRS approach to train polygenic scores for an African target sample applying the Bayesian ridge regression approach of BridgePRS to shrink the effect size of SNPs derived from a European ancestry GWAS towards their true underlying values.
 
-### BridgePRS Scenario 1: Application of European GWAS weights to an African target group
+### BridgePRS Scenario 1: Application of African GWAS weights to an African target group
 
 #### Create configuration file for the target-only analysis
 In this example we will run BridgePRS across chromosomes 1 - 22. The first required step is to generate the configuration file to run the single ancestry BridgePRS analysis we wish to run. The following command should be run from the main directory:
