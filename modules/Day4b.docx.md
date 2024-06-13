@@ -1,4 +1,4 @@
-
+ 
 ## Day 4 - Practical 2: Introduction to Admixture analysis
 
 ### Module Goals
