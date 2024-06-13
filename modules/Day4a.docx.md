@@ -18,7 +18,7 @@ BridgePRS is first applied to a large discovery population GWAS, by running Baye
 3. PRS run using a prior effect-size distribution from the European Model (prs-prior)
 The 3 models are subsequently combined to produce a weighted PRS solution
 
-As well as applying each of the steps in sequence, models can also be run separately according to the needs of individual users. Here, we use the single-ancestry BridgePRS approach to train polygenic scores for an African target sample applying the Bayesian ridge regression approach of BridgePRS to shrink the effect size of SNPs derived from a European ancestry GWAS towards their true underlying values.
+As well as applying each of the steps in sequence, models can also be run separately according to the needs of individual users. Here, we use the single-ancestry BridgePRS approach to train polygenic scores for an African target sample applying the Bayesian ridge regression approach of BridgePRS to shrink the effect size of SNPs derived from an African ancestry GWAS towards their true underlying values.
 
 ### BridgePRS Scenario 1: Application of African GWAS weights to an African target group
 
