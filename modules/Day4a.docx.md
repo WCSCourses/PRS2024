@@ -33,7 +33,7 @@ bridgePRS check pop -o out_config-AFR-single --pop AFR --sumstats_prefix data/po
 From the on-screen output:
 1. Do you notice anything interesting in the way BridgePRS handled the phenotype file?
 2. How many phenotypes was BridgePRS able to identify in the phenotype file? in what way do these phenotypes differ?
-3. Which resulting files  been generated in ./out/save/ ?
+3. Which resulting files have been generated in ./out/save/ ?
 
 #### Tasks
 In order to run the next code snippet you will need to carry out the following edits using information contained in the on-screen output:
