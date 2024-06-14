@@ -71,20 +71,20 @@ bridgePRS check pops -o out_config-EUR-AFR-easyrun --pop AFR EUR --sumstats_pref
   calculated. This needs to be done before attempting to run the code given below.
 
 #### Multi-ancestry BRIDGEPRS analysis:
-Add the relevant peices of information in the code below, before entering in your terminal.
+Add the missing peices of information to the code below, as you enter it into your terminal.
 ```
 bridgePRS easyrun go -o out_easyrun-EUR-AFR --config_files target.AFR.config base.EUR.config --fst --phenotype y
 ```
 
 #### Tasks
-- After running the code above navigate to the output directory: out_config-EUR-AFR-easyrun to inspect the results.
+- After running the above code, navigate to the output directory: ./out_config-EUR-AFR-easyrun to inspect the results.
 - Open either of the 2 plots that you see in the directory.
 
 #### Questions
-6. In the summary plot which set of values expresses the correlation between the weights calculated by BridgePRS and
+6. In the summary plot, which set of values expresses the correlation between the weights calculated by BridgePRS and
    the beta weights from the initial GWASs?
-8. In which output directory will you find precise values for variance explained by the prs-combined-AFR model?
-9. What is the variance explained (exact) by the prs-combined-AFR model?
+8. In which output directory will you find precise values of variance explained by the prs-combined-AFR model?
+9. What is the variance explained by the prs-combined-AFR model?
 
 ### Short Quiz
 I have GWAS data and genotype/phenotype data for a cohort consisting of >2000 samples from a small East European population. 
