@@ -61,13 +61,13 @@ BridgePRS is most commonly used to combine the power of a smaller ancestry-match
 bridgePRS check pops -o out_config-EUR-AFR-easyrun --pop AFR EUR --sumstats_prefix data/pop_africa/sumstats/afr.chr data/pop_europe/sumstats/eur.chr --sumstats_suffix .glm.linear.gz .glm.linear.gz --genotype_prefix data/pop_africa/genotypes/afr_genotypes --phenotype_file data/pop_africa/phenotypes/afr_pheno.dat
 ```
 #### Question
-5. Carefully check the information given in the on-screen output. How many different config files have been produced
-   this time around?
+5. Carefully check the information given in the on-screen output: (i) How many different .config files have been produced
+   and (ii) where are they located?
 
 #### Tasks
-- Incorporate the config path information into the code template provided below.
+- Incorporate the config path information into the code template provided below (for both European and African .config files).
 - Based on your-recent understanding of genetic distances between continental populations, choose a sensible    
-  value of the --fst parameter to reflect the genetic distance between Africans and Europeans. This extra information     will help inform the prior distribution from which the posterior effect weights for the target population will be
+  value of the --fst parameter to convey the genetic distance between Africans and Europeans. This extra information will inform the prior    distribution from which posterior effect weights for the target population will be
   calculated. This needs to be done before attempting to run the code given below.
 
 #### Multi-ancestry BRIDGEPRS analysis:
