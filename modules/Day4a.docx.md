@@ -56,7 +56,7 @@ bridgePRS prs-single run -o out_config-AFR-single --pop africa --config_files ou
 ### BridgePRS Scenario 2:  Prediction into African target data. using European and African summary statistics
 BridgePRS is most commonly used to combine the power of a smaller ancestry-matched GWAS with a much larger but genetically-distant GWAS population, for the purpose of maximising PRS prediction quality in under-served target populations.
 
-#### Create configuration file for base and target populations**
+#### Create configuration file for base and target populations
 ```
 bridgePRS check pops -o out_config-EUR-AFR-easyrun --pop AFR EUR --sumstats_prefix data/pop_africa/sumstats/afr.chr data/pop_europe/sumstats/eur.chr --sumstats_suffix .glm.linear.gz .glm.linear.gz --genotype_prefix data/pop_africa/genotypes/afr_genotypes --phenotype_file data/pop_africa/phenotypes/afr_pheno.dat
 ```
