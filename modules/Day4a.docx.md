@@ -35,14 +35,13 @@ From the on-screen output:
 2. How many phenotypes was BridgePRS able to identify in the phenotype file? in what way do these phenotypes differ?
 3. Which resulting files have been generated in ./out/save/ ?
 
-#### Tasks
-In the next code snippet the following information from the on-screen output has been incorporated:
-- The file path of the newly created .config (configuration) file.
-We have also opted to select the continuous version of the trait for the analysis.
+#### Note
+In the next code snippet the file path of the newly created .config (configuration) needs to be incorporated. This information is provided as part of the on-screen output. 
 
 
 ### Single ancestry BridgePRS analysis:
-Now that we have our African configuration file prepared we are ready to perform the single-ancestry BridgePRS analysis
+Now that we have our African configuration file prepared we are ready to perform the single-ancestry BridgePRS analysis.
+In this step we opt to select the continuous version of the trait for analysis.
 ```
 bridgePRS prs-single run -o out_config-AFR-single --pop africa --config_files out_config-AFR-single/save/primary.AFR.config --phenotype y
 ```
