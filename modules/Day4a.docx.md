@@ -1,7 +1,7 @@
 ## BridgePRS
 
 ### Learning Objectives
-The goal of this practical is to implement the basic steps needed to implement multi-ancestry PRS models successfully using the BridgePRS software.
+The goal of this practical is to implement the basic steps needed to implement multi-ancestry PRS prediction models successfully, using the BridgePRS software.
 
 By the end of this session participants will understand how to:
 - set up the configuration files used as input by the software.
