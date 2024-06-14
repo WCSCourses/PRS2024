@@ -36,7 +36,7 @@ From the on-screen output:
 3. Which resulting files have been generated in ./out/save/ ?
 
 #### Note
-In the next code snippet the file path of the newly created .config (configuration) file needs to be incorporated. This information is provided as part of the on-screen output. 
+In the next code snippet the file path of the newly created .config (configuration) file has been incorporated into the run command. This information was provided as part of the on-screen output in the previous step. 
 
 
 ### Single ancestry BridgePRS analysis:
