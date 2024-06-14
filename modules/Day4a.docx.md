@@ -36,9 +36,9 @@ From the on-screen output:
 3. Which resulting files have been generated in ./out/save/ ?
 
 #### Tasks
-In order to run the next code snippet you will need to carry out the following edits using information contained in the on-screen output:
-- Provide the file path of the newly created configuration file.
-- Swap the phenotype to the continuous version of the trait.
+In the next code snippet the following information from the on-screen output has been incorporated:
+- The file path of the newly created .config (configuration) file.
+We have also opted to select the continuous version of the trait for the analysis.
 
 
 ### Single ancestry BridgePRS analysis:
