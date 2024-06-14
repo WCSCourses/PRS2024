@@ -67,9 +67,7 @@ bridgePRS check pops -o out_config-EUR-AFR-easyrun --pop AFR EUR --sumstats_pref
 #### Tasks
 - Incorporate the config path information into the code template provided below.
 - Based on your-recent understanding of genetic distances between continental populations, choose a sensible    
-  value of --fst_ to reflect the genetic distance between Africans and Europeans. This extra information will help
-  inform the prior distribution used to estimate the posterior effect weights in the target population. Do this before
-  attempting to run the code given below
+  value of the --fst parameter to reflect the genetic distance between Africans and Europeans. This extra information     will help inform the prior distribution used to estimate the posterior effect weights in the target population. Do      this before attempting to run the code given below.
 
 #### Multi-ancestry BRIDGEPRS analysis:
 Add the relevant peices of information in the code below, before entering in your terminal.
