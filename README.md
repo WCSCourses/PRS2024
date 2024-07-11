@@ -56,7 +56,7 @@ The course will begin with an overview of genome-wide association studies, an in
 **Day 3 - Advanced PRS Analyses**  
 [Day 3 Online Manual A - Advanced Polygenic Risk Score Analyses](modules/Day3a.docx.md)
 
-[Day 3 Online Manual A - Introduction to Cross-Ancestry PRS computation](modules/Day3b.docx.md)
+[Day 3 Online Manual B - Introduction to Cross-Ancestry PRS computation](modules/Day3b.docx.md)
 
 
 **Day 4 - Genetic Variation and Population Genetics**  
