@@ -54,14 +54,15 @@ The course will begin with an overview of genome-wide association studies, an in
 
 
 **Day 3 - Advanced PRS Analyses**  
-Module 3 - A TBC
+[Day 3 Online Manual A - Advanced Polygenic Risk Score Analyses](modules/Day3a.docx.md)
 
-Module 3 - B TBC
-<!--- [Day 3 Online Manual - Introduction to PRS](modules/Day3.docx.md) --->
+[Day 3 Online Manual A - Introduction to Cross-Ancestry PRS computation](modules/Day3b.docx.md)
 
 
 **Day 4 - Genetic Variation and Population Genetics**  
-[Day 4 Online Manual - Introduction to PRS](modules/Day4.docx.md)
+[Day 4 Online Manual A - BridgePRS](modules/Day4a.docx.md)
+
+[Day 4 Online Manual B - Introduction to Admixture analysis](modules/Day4b.docx.md)
 
 
 **Day 5 - Group Projects**  
